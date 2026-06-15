@@ -17,482 +17,513 @@
       --texto: #2C2C2C;
       --texto-suave: #6B6B6B;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--texto); background: var(--branco); }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 999;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
       background: var(--roxo-escuro);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between;
       padding: 14px 48px;
       box-shadow: 0 2px 16px rgba(0,0,0,0.25);
     }
-    .nav-logo img {
-      height: 44px;
-      width: auto;
-      display: block;
-    }
+    .nav-logo img { height: 44px; width: auto; display: block; }
     .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a {
-      color: rgba(255,255,255,0.8);
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: color 0.3s;
+      color: rgba(255,255,255,0.8); text-decoration: none;
+      font-size: 0.82rem; font-weight: 500; letter-spacing: 1px;
+      text-transform: uppercase; transition: color 0.3s;
     }
     .nav-links a:hover { color: var(--bege); }
 
-    /* ── HERO ── */
+    /* HERO */
     #hero {
       min-height: 100vh;
       background: linear-gradient(135deg, var(--roxo-escuro) 0%, var(--roxo) 60%, #7B3FB5 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 120px 24px 80px;
-      position: relative;
-      overflow: hidden;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 120px 24px 80px; position: relative; overflow: hidden;
     }
     #hero::before {
-      content: '';
-      position: absolute;
-      top: -80px; right: -80px;
-      width: 400px; height: 400px;
-      border-radius: 50%;
+      content: ''; position: absolute; top: -80px; right: -80px;
+      width: 400px; height: 400px; border-radius: 50%;
       background: rgba(245,201,122,0.08);
     }
     #hero::after {
-      content: '';
-      position: absolute;
-      bottom: -60px; left: -60px;
-      width: 300px; height: 300px;
-      border-radius: 50%;
+      content: ''; position: absolute; bottom: -60px; left: -60px;
+      width: 300px; height: 300px; border-radius: 50%;
       background: rgba(245,201,122,0.06);
     }
     .hero-badge {
-      background: rgba(245,201,122,0.15);
-      border: 1px solid var(--bege);
-      color: var(--bege);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 6px 18px;
-      border-radius: 50px;
-      margin-bottom: 24px;
+      background: rgba(245,201,122,0.15); border: 1px solid var(--bege);
+      color: var(--bege); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase;
+      padding: 6px 18px; border-radius: 50px; margin-bottom: 24px;
     }
     #hero h1 {
-      font-family: 'Playfair Display', serif;
-      color: var(--branco);
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      line-height: 1.2;
-      max-width: 780px;
-      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif; color: var(--branco);
+      font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.2;
+      max-width: 780px; margin-bottom: 20px;
     }
     #hero h1 span { color: var(--bege); }
     #hero p {
-      color: rgba(255,255,255,0.75);
-      font-size: 1.05rem;
-      max-width: 560px;
-      line-height: 1.7;
-      margin-bottom: 40px;
+      color: rgba(255,255,255,0.75); font-size: 1.05rem;
+      max-width: 560px; line-height: 1.7; margin-bottom: 40px;
     }
-    .hero-meta {
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 48px;
-    }
+    .hero-meta { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; margin-bottom: 48px; }
     .hero-meta-item { text-align: center; }
-    .hero-meta-item strong {
-      display: block;
-      color: var(--bege);
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-    .hero-meta-item span {
-      color: rgba(255,255,255,0.6);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+    .hero-meta-item strong { display: block; color: var(--bege); font-size: 1.4rem; font-weight: 700; }
+    .hero-meta-item span { color: rgba(255,255,255,0.6); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; }
     .btn-primary {
-      background: var(--bege);
-      color: var(--roxo-escuro);
-      padding: 14px 36px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      letter-spacing: 0.5px;
-      transition: all 0.3s;
-      display: inline-block;
+      background: var(--bege); color: var(--roxo-escuro);
+      padding: 14px 36px; border-radius: 50px; font-weight: 700;
+      font-size: 0.95rem; text-decoration: none; letter-spacing: 0.5px;
+      transition: all 0.3s; display: inline-block;
     }
-    .btn-primary:hover {
-      background: #e6b45a;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-    }
+    .btn-primary:hover { background: #e6b45a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
 
-    /* ── SECTIONS GENÉRICAS ── */
+    /* SECTIONS */
     section { padding: 90px 24px; }
     .container { max-width: 1080px; margin: 0 auto; }
     .section-label {
-      display: inline-block;
-      background: var(--roxo-claro);
-      color: var(--branco);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 50px;
-      margin-bottom: 16px;
+      display: inline-block; background: var(--roxo-claro); color: var(--branco);
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 50px; margin-bottom: 16px;
     }
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      color: var(--roxo-escuro);
-      margin-bottom: 16px;
-      line-height: 1.25;
+      color: var(--roxo-escuro); margin-bottom: 16px; line-height: 1.25;
     }
-    .section-subtitle {
-      color: var(--texto-suave);
-      font-size: 1rem;
-      line-height: 1.7;
-      max-width: 620px;
-    }
+    .section-subtitle { color: var(--texto-suave); font-size: 1rem; line-height: 1.7; max-width: 620px; }
 
-    /* ── SOBRE O PROJETO ── */
+    /* SOBRE */
     #sobre { background: var(--bege-claro); }
-    .sobre-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      margin-top: 48px;
-    }
+    .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 48px; }
     .sobre-card {
-      background: var(--branco);
-      border-radius: 16px;
-      padding: 36px;
-      box-shadow: 0 4px 24px rgba(91,45,142,0.08);
-      border-left: 5px solid var(--roxo);
+      background: var(--branco); border-radius: 16px; padding: 36px;
+      box-shadow: 0 4px 24px rgba(91,45,142,0.08); border-left: 5px solid var(--roxo);
     }
-    .sobre-card h3 {
-      font-family: 'Playfair Display', serif;
-      color: var(--roxo-escuro);
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
+    .sobre-card h3 { font-family: 'Playfair Display', serif; color: var(--roxo-escuro); font-size: 1.2rem; margin-bottom: 12px; }
     .sobre-card p { color: var(--texto-suave); font-size: 0.93rem; line-height: 1.7; }
     .sobre-card .icon { font-size: 2rem; margin-bottom: 14px; display: block; }
 
-    /* ── ESCOPO ── */
+    /* ESCOPO */
     #escopo { background: var(--branco); }
-    .escopo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
-      margin-top: 48px;
-    }
+    .escopo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; margin-top: 48px; }
     .escopo-item {
-      background: var(--cinza);
-      border-radius: 14px;
-      padding: 28px;
-      transition: all 0.3s;
-      border: 2px solid transparent;
+      background: var(--cinza); border-radius: 14px; padding: 28px;
+      transition: all 0.3s; border: 2px solid transparent;
+      cursor: pointer; position: relative; overflow: hidden;
     }
+    .escopo-item::after {
+      content: '👆 clique para ver'; position: absolute; bottom: 12px; right: 16px;
+      font-size: 0.7rem; color: var(--roxo-claro); font-weight: 600;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .escopo-item:hover::after { opacity: 1; }
     .escopo-item:hover {
-      border-color: var(--roxo-claro);
-      transform: translateY(-4px);
-      box-shadow: 0 8px 28px rgba(91,45,142,0.1);
+      border-color: var(--roxo-claro); transform: translateY(-6px);
+      box-shadow: 0 12px 36px rgba(91,45,142,0.15);
     }
     .escopo-num {
-      width: 40px; height: 40px;
-      background: var(--roxo);
-      color: var(--branco);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 16px;
+      width: 40px; height: 40px; background: var(--roxo); color: var(--branco);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.9rem; margin-bottom: 16px;
     }
     .escopo-item h4 { font-weight: 700; color: var(--roxo-escuro); margin-bottom: 8px; font-size: 1rem; }
     .escopo-item p { color: var(--texto-suave); font-size: 0.88rem; line-height: 1.65; }
 
-    /* ── ✅ AVISO CONTEÚDO FPA ── */
+    /* AVISO FPA */
     .escopo-aviso {
-      margin-top: 48px;
-      background: linear-gradient(135deg, #FDF6E3, #FFF8EC);
-      border: 2px solid var(--bege);
-      border-radius: 18px;
-      padding: 32px 36px;
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-      box-shadow: 0 4px 20px rgba(245, 201, 122, 0.2);
-      position: relative;
-      overflow: hidden;
+      margin-top: 48px; background: linear-gradient(135deg, #FDF6E3, #FFF8EC);
+      border: 2px solid var(--bege); border-radius: 18px; padding: 32px 36px;
+      display: flex; gap: 20px; align-items: flex-start;
+      box-shadow: 0 4px 20px rgba(245,201,122,0.2); position: relative; overflow: hidden;
     }
     .escopo-aviso::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 6px;
-      height: 100%;
-      background: var(--bege);
-      border-radius: 18px 0 0 18px;
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 6px; height: 100%; background: var(--bege); border-radius: 18px 0 0 18px;
     }
-    .escopo-aviso-icon {
-      font-size: 2rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
+    .escopo-aviso-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
     .escopo-aviso-content h4 {
-      font-family: 'Playfair Display', serif;
-      color: var(--roxo-escuro);
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif; color: var(--roxo-escuro);
+      font-size: 1.05rem; font-weight: 700; margin-bottom: 10px;
     }
-    .escopo-aviso-content p {
-      color: var(--texto-suave);
-      font-size: 0.9rem;
-      line-height: 1.75;
-      margin-bottom: 8px;
-    }
+    .escopo-aviso-content p { color: var(--texto-suave); font-size: 0.9rem; line-height: 1.75; margin-bottom: 8px; }
     .escopo-aviso-content p:last-child { margin-bottom: 0; }
     .escopo-aviso-content strong { color: var(--roxo-escuro); }
 
-    /* ── DIFERENCIAIS ── */
-    #diferenciais {
-      background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
-      color: var(--branco);
-    }
+    /* DIFERENCIAIS */
+    #diferenciais { background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo)); color: var(--branco); }
     #diferenciais .section-title { color: var(--branco); }
     #diferenciais .section-subtitle { color: rgba(255,255,255,0.7); }
-    .diff-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 48px;
-    }
+    .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
     .diff-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 16px;
-      padding: 28px 24px;
-      text-align: center;
-      transition: all 0.3s;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px; padding: 28px 24px; text-align: center; transition: all 0.3s;
     }
     .diff-card:hover { background: rgba(255,255,255,0.14); transform: translateY(-4px); }
     .diff-card .emoji { font-size: 2.4rem; margin-bottom: 14px; display: block; }
     .diff-card h4 { color: var(--bege); font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
     .diff-card p { color: rgba(255,255,255,0.65); font-size: 0.85rem; line-height: 1.6; }
 
-    /* ── PRAZO ── */
+    /* PRAZO */
     #prazo { background: var(--bege-claro); }
-    .timeline { position: relative; margin-top: 52px; padding-left: 0; }
     .timeline-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0;
-      position: relative;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0; position: relative; margin-top: 52px;
     }
     .timeline-steps::before {
-      content: '';
-      position: absolute;
-      top: 36px;
-      left: 0; right: 0;
-      height: 3px;
-      background: var(--roxo-claro);
-      z-index: 0;
+      content: ''; position: absolute; top: 36px; left: 0; right: 0;
+      height: 3px; background: var(--roxo-claro); z-index: 0;
     }
     .tl-step { text-align: center; position: relative; z-index: 1; padding: 0 16px; }
     .tl-dot {
-      width: 72px; height: 72px;
-      background: var(--roxo);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 1.5rem;
+      width: 72px; height: 72px; background: var(--roxo); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; font-size: 1.5rem;
       box-shadow: 0 4px 16px rgba(91,45,142,0.3);
     }
     .tl-step h4 { color: var(--roxo-escuro); font-weight: 700; margin-bottom: 8px; font-size: 0.95rem; }
     .tl-step .tl-dias {
-      display: inline-block;
-      background: var(--roxo);
-      color: var(--branco);
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 50px;
-      margin-bottom: 10px;
+      display: inline-block; background: var(--roxo); color: var(--branco);
+      font-size: 0.75rem; font-weight: 700; padding: 4px 12px;
+      border-radius: 50px; margin-bottom: 10px;
     }
     .tl-step p { color: var(--texto-suave); font-size: 0.83rem; line-height: 1.6; }
 
-    /* ── INVESTIMENTO ── */
+    /* INVESTIMENTO */
     #investimento { background: var(--branco); }
     .invest-card {
-      max-width: 680px;
-      margin: 48px auto 0;
-      background: var(--roxo-escuro);
-      border-radius: 24px;
-      overflow: hidden;
+      max-width: 680px; margin: 48px auto 0;
+      background: var(--roxo-escuro); border-radius: 24px; overflow: hidden;
       box-shadow: 0 12px 48px rgba(91,45,142,0.25);
     }
     .invest-header { background: var(--roxo); padding: 32px 40px; text-align: center; }
-    .invest-header p {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.85rem;
-      margin-bottom: 8px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    .invest-price {
-      font-family: 'Playfair Display', serif;
-      color: var(--bege);
-      font-size: 3.2rem;
-      font-weight: 700;
-      line-height: 1;
-    }
+    .invest-header p { color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase; }
+    .invest-price { font-family: 'Playfair Display', serif; color: var(--bege); font-size: 3.2rem; font-weight: 700; line-height: 1; }
     .invest-price span { font-size: 1.4rem; vertical-align: super; }
-    .invest-parcelas {
-      margin-top: 14px;
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .invest-parcela-item {
-      background: rgba(255,255,255,0.12);
-      border-radius: 10px;
-      padding: 10px 20px;
-      text-align: center;
-    }
-    .invest-parcela-item .p-label {
-      color: rgba(255,255,255,0.65);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      display: block;
-      margin-bottom: 4px;
-    }
-    .invest-parcela-item .p-value {
-      color: var(--bege);
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
+    .invest-parcelas { margin-top: 14px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .invest-parcela-item { background: rgba(255,255,255,0.12); border-radius: 10px; padding: 10px 20px; text-align: center; }
+    .invest-parcela-item .p-label { color: rgba(255,255,255,0.65); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 4px; }
+    .invest-parcela-item .p-value { color: var(--bege); font-weight: 700; font-size: 1.1rem; }
     .invest-body { padding: 36px 40px; }
-    .invest-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+    .invest-row { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .invest-row:last-child { border-bottom: none; }
     .invest-row .label { color: rgba(255,255,255,0.6); font-size: 0.88rem; }
     .invest-row .value { color: var(--bege); font-weight: 700; font-size: 1rem; }
     .invest-cta { padding: 0 40px 36px; text-align: center; }
     .btn-invest {
-      display: inline-block;
-      background: var(--bege);
-      color: var(--roxo-escuro);
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 16px 48px;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: all 0.3s;
-      width: 100%;
+      display: inline-block; background: var(--bege); color: var(--roxo-escuro);
+      font-weight: 700; font-size: 1rem; padding: 16px 48px; border-radius: 50px;
+      text-decoration: none; transition: all 0.3s; width: 100%;
     }
     .btn-invest:hover { background: #e6b45a; transform: translateY(-2px); }
 
-    /* ── SOBRE A AGÊNCIA ── */
+    /* AGÊNCIA */
     #agencia { background: var(--cinza); }
-    .agencia-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      margin-top: 48px;
-    }
+    .agencia-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 48px; }
     .agencia-text p { color: var(--texto-suave); font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
     .agencia-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .pill {
-      background: var(--roxo);
-      color: var(--branco);
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 6px 16px;
-      border-radius: 50px;
-    }
-    .agencia-logo-box {
-      background: var(--roxo-escuro);
-      border-radius: 20px;
-      padding: 60px 40px;
-      text-align: center;
-    }
-    .agencia-logo-box img {
-      width: 160px;
-      height: auto;
-      margin-bottom: 16px;
-    }
-    .agencia-logo-box .tagline {
-      color: rgba(255,255,255,0.55);
-      font-size: 0.85rem;
-      margin-top: 4px;
-      font-style: italic;
-    }
+    .pill { background: var(--roxo); color: var(--branco); font-size: 0.78rem; font-weight: 600; padding: 6px 16px; border-radius: 50px; }
+    .agencia-logo-box { background: var(--roxo-escuro); border-radius: 20px; padding: 60px 40px; text-align: center; }
+    .agencia-logo-box img { width: 160px; height: auto; margin-bottom: 16px; }
+    .agencia-logo-box .tagline { color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 4px; font-style: italic; }
     .agencia-logo-box .insta {
-      display: inline-block;
-      margin-top: 20px;
-      color: var(--bege);
-      font-size: 0.82rem;
-      font-weight: 600;
-      text-decoration: none;
-      border: 1px solid var(--bege);
-      padding: 6px 18px;
-      border-radius: 50px;
+      display: inline-block; margin-top: 20px; color: var(--bege);
+      font-size: 0.82rem; font-weight: 600; text-decoration: none;
+      border: 1px solid var(--bege); padding: 6px 18px; border-radius: 50px;
     }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer { background: var(--roxo-escuro); padding: 48px 24px; text-align: center; }
-    .footer-logo img {
-      height: 56px;
-      width: auto;
-      margin-bottom: 12px;
-    }
+    .footer-logo img { height: 56px; width: auto; margin-bottom: 12px; }
     footer p { color: rgba(255,255,255,0.45); font-size: 0.82rem; line-height: 1.7; }
     footer .footer-line { width: 48px; height: 3px; background: var(--bege); margin: 16px auto; border-radius: 2px; }
 
-    /* ── RESPONSIVE ── */
+    /* ══════════════════════════════════════════
+       MODAL SYSTEM
+    ══════════════════════════════════════════ */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(20, 8, 40, 0.85); backdrop-filter: blur(6px);
+      align-items: center; justify-content: center; padding: 24px;
+      animation: fadeIn 0.25s ease;
+    }
+    .modal-overlay.active { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .modal-box {
+      background: var(--branco); border-radius: 24px; width: 100%;
+      max-width: 760px; max-height: 88vh; overflow-y: auto;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+      animation: slideUp 0.35s cubic-bezier(0.34,1.56,0.64,1);
+      position: relative;
+    }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(40px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+    .modal-header {
+      background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
+      padding: 32px 36px 28px; border-radius: 24px 24px 0 0;
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+    }
+    .modal-header-text {}
+    .modal-header .modal-emoji { font-size: 2.4rem; display: block; margin-bottom: 8px; }
+    .modal-header h2 { font-family: 'Playfair Display', serif; color: var(--branco); font-size: 1.5rem; margin-bottom: 6px; }
+    .modal-header p { color: rgba(255,255,255,0.65); font-size: 0.88rem; line-height: 1.5; }
+    .modal-close {
+      background: rgba(255,255,255,0.15); border: none; color: var(--branco);
+      width: 36px; height: 36px; border-radius: 50%; font-size: 1.1rem;
+      cursor: pointer; flex-shrink: 0; transition: all 0.2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .modal-close:hover { background: rgba(255,255,255,0.3); transform: rotate(90deg); }
+    .modal-body { padding: 36px; }
+
+    /* TIMELINE MODAL */
+    .mtl-item {
+      display: flex; gap: 20px; align-items: flex-start; margin-bottom: 32px; position: relative;
+    }
+    .mtl-item:not(:last-child)::after {
+      content: ''; position: absolute; left: 22px; top: 52px;
+      width: 2px; height: calc(100% - 20px); background: var(--roxo-claro);
+    }
+    .mtl-dot {
+      width: 44px; height: 44px; border-radius: 50%; background: var(--roxo);
+      color: var(--branco); display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(91,45,142,0.3);
+    }
+    .mtl-content h4 { color: var(--roxo-escuro); font-weight: 700; margin-bottom: 4px; }
+    .mtl-content span { font-size: 0.78rem; color: var(--roxo-claro); font-weight: 600; display: block; margin-bottom: 6px; }
+    .mtl-content p { color: var(--texto-suave); font-size: 0.88rem; line-height: 1.6; }
+
+    /* ACERVO MODAL */
+    .acervo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+    .acervo-thumb {
+      aspect-ratio: 1; border-radius: 12px; overflow: hidden;
+      background: linear-gradient(135deg, #e8e0f5, #d5c5ea);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; cursor: pointer; transition: all 0.3s;
+      border: 2px solid transparent; position: relative;
+    }
+    .acervo-thumb:hover { border-color: var(--roxo); transform: scale(1.03); }
+    .acervo-thumb .acervo-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(59,26,107,0.9));
+      color: var(--branco); font-size: 0.72rem; font-weight: 600;
+      padding: 16px 8px 8px; text-align: center;
+    }
+
+    /* AGENDA MODAL */
+    .agenda-cal { margin-bottom: 24px; }
+    .cal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+    .cal-header h3 { color: var(--roxo-escuro); font-family: 'Playfair Display', serif; }
+    .cal-nav { background: var(--roxo); color: var(--branco); border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 1rem; }
+    .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+    .cal-day-label { text-align: center; font-size: 0.72rem; font-weight: 700; color: var(--roxo-claro); padding: 4px; }
+    .cal-day {
+      aspect-ratio: 1; border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: 0.82rem; cursor: pointer; transition: all 0.2s; color: var(--texto);
+    }
+    .cal-day:hover { background: var(--roxo); color: var(--branco); }
+    .cal-day.today { background: var(--bege); color: var(--roxo-escuro); font-weight: 700; }
+    .cal-day.selected { background: var(--roxo-escuro); color: var(--branco); font-weight: 700; }
+    .cal-day.empty { cursor: default; }
+    .cal-day.blocked { color: #ccc; cursor: not-allowed; }
+    .agenda-form { display: flex; flex-direction: column; gap: 14px; }
+    .agenda-form input, .agenda-form select, .agenda-form textarea {
+      padding: 12px 16px; border: 2px solid #e8e0f5; border-radius: 10px;
+      font-family: 'Inter', sans-serif; font-size: 0.9rem; outline: none; transition: border 0.2s;
+    }
+    .agenda-form input:focus, .agenda-form select:focus, .agenda-form textarea:focus { border-color: var(--roxo); }
+    .btn-modal {
+      background: var(--roxo); color: var(--branco); border: none;
+      padding: 14px 28px; border-radius: 50px; font-weight: 700; font-size: 0.95rem;
+      cursor: pointer; transition: all 0.3s; width: 100%;
+    }
+    .btn-modal:hover { background: var(--roxo-escuro); transform: translateY(-2px); }
+
+    /* MAPA MODAL */
+    .mapa-container { border-radius: 16px; overflow: hidden; border: 3px solid var(--roxo); }
+    .mapa-container iframe { width: 100%; height: 380px; border: none; display: block; }
+    .mapa-info {
+      background: var(--bege-claro); border-radius: 12px; padding: 20px;
+      margin-top: 16px; display: flex; gap: 16px; align-items: flex-start;
+    }
+    .mapa-info .map-icon { font-size: 2rem; flex-shrink: 0; }
+    .mapa-info h4 { color: var(--roxo-escuro); font-weight: 700; margin-bottom: 4px; }
+    .mapa-info p { color: var(--texto-suave); font-size: 0.88rem; line-height: 1.6; }
+
+    /* AUDIOGUIA MODAL */
+    .audio-player {
+      background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
+      border-radius: 20px; padding: 36px; text-align: center; margin-bottom: 24px;
+    }
+    .audio-wave {
+      display: flex; align-items: center; justify-content: center;
+      gap: 4px; height: 48px; margin: 20px 0;
+    }
+    .audio-bar {
+      width: 4px; background: rgba(255,255,255,0.5); border-radius: 2px;
+      animation: wave 1.2s ease-in-out infinite;
+    }
+    .audio-bar:nth-child(2) { animation-delay: 0.1s; }
+    .audio-bar:nth-child(3) { animation-delay: 0.2s; }
+    .audio-bar:nth-child(4) { animation-delay: 0.3s; }
+    .audio-bar:nth-child(5) { animation-delay: 0.4s; }
+    .audio-bar:nth-child(6) { animation-delay: 0.3s; }
+    .audio-bar:nth-child(7) { animation-delay: 0.2s; }
+    .audio-bar:nth-child(8) { animation-delay: 0.1s; }
+    .audio-bar:nth-child(9) { animation-delay: 0s; }
+    @keyframes wave {
+      0%, 100% { height: 8px; background: rgba(255,255,255,0.4); }
+      50% { height: 40px; background: var(--bege); }
+    }
+    .audio-bar.paused { animation-play-state: paused; height: 8px !important; background: rgba(255,255,255,0.4) !important; }
+    .audio-title { color: var(--branco); font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 4px; }
+    .audio-sub { color: rgba(255,255,255,0.6); font-size: 0.82rem; }
+    .audio-controls { display: flex; gap: 12px; justify-content: center; margin-top: 20px; }
+    .btn-play {
+      background: var(--bege); color: var(--roxo-escuro); border: none;
+      width: 56px; height: 56px; border-radius: 50%; font-size: 1.4rem;
+      cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center;
+    }
+    .btn-play:hover { transform: scale(1.1); box-shadow: 0 4px 20px rgba(245,201,122,0.5); }
+    .qr-preview {
+      border: 3px dashed var(--roxo-claro); border-radius: 16px; padding: 32px;
+      text-align: center; background: var(--cinza);
+    }
+    .qr-code-svg { margin: 16px auto; display: block; }
+    .qr-preview h4 { color: var(--roxo-escuro); font-weight: 700; margin-bottom: 8px; }
+    .qr-preview p { color: var(--texto-suave); font-size: 0.85rem; }
+
+    /* BLOG MODAL */
+    .blog-article { }
+    .blog-tag {
+      display: inline-block; background: var(--roxo); color: var(--branco);
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 50px; margin-bottom: 16px;
+    }
+    .blog-title { font-family: 'Playfair Display', serif; color: var(--roxo-escuro); font-size: 1.5rem; margin-bottom: 12px; line-height: 1.3; }
+    .blog-meta { color: var(--texto-suave); font-size: 0.82rem; margin-bottom: 20px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .blog-img {
+      width: 100%; height: 200px; border-radius: 14px; margin-bottom: 20px;
+      background: linear-gradient(135deg, #e8e0f5, var(--roxo-claro));
+      display: flex; align-items: center; justify-content: center; font-size: 4rem;
+    }
+    .blog-body p { color: var(--texto-suave); font-size: 0.92rem; line-height: 1.8; margin-bottom: 14px; }
+
+    /* DEPOIMENTOS MODAL */
+    .video-embed { border-radius: 16px; overflow: hidden; margin-bottom: 20px; border: 3px solid var(--roxo); }
+    .video-embed iframe { width: 100%; height: 340px; border: none; display: block; }
+    .depo-list { display: flex; flex-direction: column; gap: 12px; }
+    .depo-item {
+      background: var(--cinza); border-radius: 12px; padding: 16px 20px;
+      border-left: 4px solid var(--roxo); cursor: pointer; transition: all 0.2s;
+    }
+    .depo-item:hover { border-left-color: var(--bege); background: #eee; }
+    .depo-item h5 { color: var(--roxo-escuro); font-weight: 700; margin-bottom: 2px; }
+    .depo-item span { color: var(--texto-suave); font-size: 0.82rem; }
+
+    /* LOCALIZAÇÃO MODAL */
+    .loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    .loc-card {
+      background: var(--cinza); border-radius: 12px; padding: 20px;
+      text-align: center; border-top: 4px solid var(--roxo);
+    }
+    .loc-card .loc-emoji { font-size: 2rem; margin-bottom: 8px; display: block; }
+    .loc-card h4 { color: var(--roxo-escuro); font-weight: 700; margin-bottom: 6px; font-size: 0.95rem; }
+    .loc-card p { color: var(--texto-suave); font-size: 0.85rem; line-height: 1.6; }
+    .horarios-table { width: 100%; border-collapse: collapse; }
+    .horarios-table th { background: var(--roxo); color: var(--branco); padding: 10px 16px; text-align: left; font-size: 0.85rem; }
+    .horarios-table td { padding: 10px 16px; border-bottom: 1px solid #eee; font-size: 0.88rem; color: var(--texto-suave); }
+    .horarios-table tr:last-child td { border-bottom: none; }
+    .status-aberto { color: #2e7d32; font-weight: 700; }
+    .status-fechado { color: #c62828; font-weight: 700; }
+
+    /* FPA MODAL */
+    .fpa-units { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .fpa-unit {
+      background: var(--cinza); border-radius: 14px; padding: 20px;
+      border-top: 4px solid var(--roxo); transition: all 0.2s;
+    }
+    .fpa-unit:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(91,45,142,0.12); }
+    .fpa-unit .u-emoji { font-size: 2rem; margin-bottom: 10px; display: block; }
+    .fpa-unit h4 { color: var(--roxo-escuro); font-weight: 700; margin-bottom: 6px; font-size: 0.95rem; }
+    .fpa-unit p { color: var(--texto-suave); font-size: 0.82rem; line-height: 1.6; }
+
+    /* LGPD MODAL */
+    .lgpd-section { margin-bottom: 24px; }
+    .lgpd-section h4 { color: var(--roxo-escuro); font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .lgpd-section p { color: var(--texto-suave); font-size: 0.88rem; line-height: 1.75; }
+    .lgpd-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7;
+      font-size: 0.78rem; font-weight: 700; padding: 6px 14px; border-radius: 50px;
+      margin-bottom: 20px;
+    }
+
+    /* FUTURO MODAL */
+    .roadmap { display: flex; flex-direction: column; gap: 16px; }
+    .roadmap-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: var(--cinza); border-radius: 12px; padding: 18px 20px;
+      transition: all 0.3s;
+    }
+    .roadmap-item:hover { transform: translateX(6px); border-left: 4px solid var(--roxo); }
+    .roadmap-item .r-emoji { font-size: 1.8rem; flex-shrink: 0; }
+    .roadmap-item h4 { color: var(--roxo-escuro); font-weight: 700; margin-bottom: 4px; }
+    .roadmap-item p { color: var(--texto-suave); font-size: 0.85rem; line-height: 1.6; }
+    .r-tag {
+      display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 3px 10px;
+      border-radius: 50px; margin-bottom: 6px;
+    }
+    .r-tag.em-breve { background: #fff3cd; color: #856404; }
+    .r-tag.futuro { background: #e8e0f5; color: var(--roxo); }
+
+    /* CANONIZAÇÃO MODAL */
+    .canon-steps { display: flex; flex-direction: column; gap: 0; }
+    .canon-step {
+      display: flex; gap: 20px; align-items: flex-start; position: relative; padding-bottom: 28px;
+    }
+    .canon-step:not(:last-child)::after {
+      content: ''; position: absolute; left: 20px; top: 44px;
+      width: 2px; height: calc(100% - 24px); background: var(--roxo-claro);
+    }
+    .canon-dot {
+      width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+    }
+    .canon-dot.done { background: var(--roxo); }
+    .canon-dot.current { background: var(--bege); animation: pulse 1.5s ease-in-out infinite; }
+    .canon-dot.pending { background: #ddd; }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(245,201,122,0.5); } 50% { box-shadow: 0 0 0 10px rgba(245,201,122,0); } }
+    .canon-content h4 { color: var(--roxo-escuro); font-weight: 700; margin-bottom: 4px; }
+    .canon-content p { color: var(--texto-suave); font-size: 0.86rem; line-height: 1.6; }
+    .canon-status {
+      display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 3px 10px;
+      border-radius: 50px; margin-bottom: 6px;
+    }
+    .canon-status.concluido { background: #e8f5e9; color: #2e7d32; }
+    .canon-status.atual { background: #fff3cd; color: #856404; }
+    .canon-status.pendente { background: #f5f5f5; color: #888; }
+
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       nav { padding: 14px 20px; }
       .nav-links { display: none; }
       .sobre-grid, .agencia-inner { grid-template-columns: 1fr; gap: 28px; }
       .timeline-steps::before { display: none; }
-      .invest-header, .invest-body, .invest-cta { padding-left: 24px; padding-right: 24px; }
       .diff-grid { grid-template-columns: 1fr; }
       .escopo-aviso { flex-direction: column; gap: 12px; padding: 24px 20px; }
+      .modal-body { padding: 24px; }
+      .modal-header { padding: 24px 20px; }
+      .acervo-grid { grid-template-columns: repeat(2, 1fr); }
+      .loc-grid { grid-template-columns: 1fr; }
+      .fpa-units { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -518,53 +549,25 @@
     <h1>Renovação Digital do <span>Centro Cultural e Histórico Padre Albino</span></h1>
     <p>Uma proposta pensada para modernizar, preservar e conectar o legado de Padre Albino com o mundo digital — com tecnologia, identidade e propósito.</p>
     <div class="hero-meta">
-      <div class="hero-meta-item">
-        <strong>CCHPA</strong>
-        <span>Cliente</span>
-      </div>
-      <div class="hero-meta-item">
-        <strong>30 dias</strong>
-        <span>Layout inicial</span>
-      </div>
-      <div class="hero-meta-item">
-        <strong>90 dias</strong>
-        <span>Entrega final</span>
-      </div>
-      <div class="hero-meta-item">
-        <strong>2026</strong>
-        <span>Ano de entrega</span>
-      </div>
+      <div class="hero-meta-item"><strong>CCHPA</strong><span>Cliente</span></div>
+      <div class="hero-meta-item"><strong>30 dias</strong><span>Layout inicial</span></div>
+      <div class="hero-meta-item"><strong>90 dias</strong><span>Entrega final</span></div>
+      <div class="hero-meta-item"><strong>2026</strong><span>Ano de entrega</span></div>
     </div>
     <a href="#sobre" class="btn-primary">Conhecer a Proposta ↓</a>
   </section>
 
-  <!-- SOBRE O PROJETO -->
+  <!-- SOBRE -->
   <section id="sobre">
     <div class="container">
       <div class="section-label">O Projeto</div>
       <h2 class="section-title">Por que renovar o site do CCHPA?</h2>
       <p class="section-subtitle">O Centro Cultural e Histórico Padre Albino é um patrimônio vivo de Catanduva. A renovação digital vai ampliar seu alcance, facilitar o acesso ao acervo e fortalecer a missão de preservar a memória da "Cidade Feitiço".</p>
       <div class="sobre-grid">
-        <div class="sobre-card">
-          <span class="icon">🏛️</span>
-          <h3>Modernização Digital</h3>
-          <p>Interface contemporânea e responsiva que transmite o valor histórico e espiritual do legado de Padre Albino, adaptada a todos os dispositivos.</p>
-        </div>
-        <div class="sobre-card">
-          <span class="icon">📚</span>
-          <h3>Acessibilidade Cultural</h3>
-          <p>Facilitar o agendamento de visitas e o acesso ao acervo digital para estudantes, pesquisadores, devotos e a comunidade local.</p>
-        </div>
-        <div class="sobre-card">
-          <span class="icon">🔍</span>
-          <h3>Preservação da Memória</h3>
-          <p>Narrativa alinhada às melhores práticas de SEO e usabilidade, garantindo que a história de Padre Albino seja encontrada e acessada por todos.</p>
-        </div>
-        <div class="sobre-card">
-          <span class="icon">🌐</span>
-          <h3>Alcance Global</h3>
-          <p>Tour virtual 360°, acervo digital e blog que permitem que pessoas de qualquer lugar do mundo se conectem com o legado do CCHPA.</p>
-        </div>
+        <div class="sobre-card"><span class="icon">🏛️</span><h3>Modernização Digital</h3><p>Interface contemporânea e responsiva que transmite o valor histórico e espiritual do legado de Padre Albino, adaptada a todos os dispositivos.</p></div>
+        <div class="sobre-card"><span class="icon">📚</span><h3>Acessibilidade Cultural</h3><p>Facilitar o agendamento de visitas e o acesso ao acervo digital para estudantes, pesquisadores, devotos e a comunidade local.</p></div>
+        <div class="sobre-card"><span class="icon">🔍</span><h3>Preservação da Memória</h3><p>Narrativa alinhada às melhores práticas de SEO e usabilidade, garantindo que a história de Padre Albino seja encontrada e acessada por todos.</p></div>
+        <div class="sobre-card"><span class="icon">🌐</span><h3>Alcance Global</h3><p>Tour virtual 360°, acervo digital e blog que permitem que pessoas de qualquer lugar do mundo se conectem com o legado do CCHPA.</p></div>
       </div>
     </div>
   </section>
@@ -574,71 +577,83 @@
     <div class="container">
       <div class="section-label">Escopo Completo</div>
       <h2 class="section-title">O que está incluso no projeto</h2>
-      <p class="section-subtitle">Todas as funcionalidades e páginas solicitadas no briefing, desenvolvidas com foco em experiência do usuário, acessibilidade e performance.</p>
+      <p class="section-subtitle">Clique em qualquer funcionalidade para ver uma prévia interativa de como ela funcionará no site.</p>
       <div class="escopo-grid">
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-timeline')">
           <div class="escopo-num">01</div>
           <h4>⏳ Linha do Tempo Interativa</h4>
-          <p>Narrativa visual da vida de Padre Albino, desde a chegada ao Brasil até a criação das unidades da Fundação, com linha do tempo das unidades da FPA.</p>
+          <p>Narrativa visual da vida de Padre Albino, com linha do tempo das unidades da FPA.</p>
         </div>
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-acervo')">
           <div class="escopo-num">02</div>
           <h4>🖼️ Acervo Digital</h4>
-          <p>Galeria categorizada com fotos, objetos pessoais, vestimentas e documentos digitalizados, com área para download de materiais educativos.</p>
+          <p>Galeria categorizada com fotos, objetos pessoais, vestimentas e documentos digitalizados.</p>
         </div>
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-agenda')">
           <div class="escopo-num">03</div>
           <h4>📅 Agendamento Online</h4>
-          <p>Formulário simplificado para visitas guiadas de escolas e grupos, com integração de e-mail e confirmação automática.</p>
+          <p>Formulário simplificado para visitas guiadas de escolas e grupos.</p>
         </div>
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-canon')">
           <div class="escopo-num">04</div>
           <h4>✝️ Causa da Canonização</h4>
-          <p>Espaço dedicado para atualizações sobre o processo no Vaticano e coleta de relatos de graças alcançadas.</p>
+          <p>Espaço dedicado para atualizações sobre o processo no Vaticano e coleta de relatos.</p>
         </div>
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-mapa')">
           <div class="escopo-num">05</div>
           <h4>🌍 Tour Virtual 360°</h4>
-          <p>Permite que pessoas de qualquer lugar do mundo "entrem" virtualmente no Centro Cultural, essencial para a disseminação do legado.</p>
+          <p>Permite que pessoas de qualquer lugar do mundo visitem virtualmente o Centro Cultural.</p>
         </div>
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-audio')">
           <div class="escopo-num">06</div>
           <h4>📻 Audioguia com QR Code</h4>
-          <p>QR Codes que podem ser lidos no local para ouvir a história de cada peça do acervo, aumentando a acessibilidade da visita.</p>
+          <p>QR Codes que podem ser lidos no local para ouvir a história de cada peça do acervo.</p>
         </div>
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-blog')">
           <div class="escopo-num">07</div>
           <h4>✍️ Blog "Memória e Fé"</h4>
-          <p>Artigos mensais sobre curiosidades históricas para fortalecer o SEO orgânico com palavras-chave como "Museu Catanduva" e "História Padre Albino".</p>
+          <p>Artigos mensais sobre curiosidades históricas para fortalecer o SEO orgânico.</p>
         </div>
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-video')">
           <div class="escopo-num">08</div>
           <h4>🎥 Depoimentos em Vídeo</h4>
-          <p>Área dedicada a vídeos de pessoas que conviveram com Padre Albino ou foram impactadas por suas obras.</p>
+          <p>Área dedicada a vídeos de pessoas impactadas pelas obras de Padre Albino.</p>
         </div>
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-localizacao')">
           <div class="escopo-num">09</div>
           <h4>📍 Localização e Horários</h4>
-          <p>Informações claras sobre como chegar, horário de funcionamento, acessibilidade e regras de conduta para visitas.</p>
+          <p>Informações claras sobre como chegar, horários e acessibilidade.</p>
         </div>
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-fpa')">
           <div class="escopo-num">10</div>
           <h4>🏗️ Área da FPA</h4>
-          <p>Seção dedicada à Fundação Padre Albino com fotos, dados históricos e conexão com todas as unidades: UNIFIPA, Hospital Emílio Carlos, Colégio Catanduva e demais.</p>
+          <p>Seção dedicada à Fundação Padre Albino com todas as unidades.</p>
         </div>
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-lgpd')">
           <div class="escopo-num">11</div>
           <h4>🔒 Conformidade LGPD</h4>
-          <p>Implementação de termos de uso e política de privacidade conforme a Lei Geral de Proteção de Dados, especialmente nos formulários de contato e doação.</p>
+          <p>Termos de uso e política de privacidade conforme a legislação brasileira.</p>
         </div>
-        <div class="escopo-item">
+
+        <div class="escopo-item" onclick="openModal('modal-futuro')">
           <div class="escopo-num">12</div>
           <h4>🤖 Pronto para o Futuro</h4>
-          <p>Arquitetura preparada para integrações futuras como chatbots de atendimento e novos sistemas de gestão.</p>
+          <p>Arquitetura preparada para integrações futuras como chatbots e novos sistemas.</p>
         </div>
+
       </div>
 
-      <!-- ✅ AVISO: Conteúdo fornecido pela FPA -->
       <div class="escopo-aviso">
         <div class="escopo-aviso-icon">📌</div>
         <div class="escopo-aviso-content">
@@ -647,7 +662,6 @@
           <p>O escopo desta proposta contempla o <strong>desenvolvimento, design, programação e publicação</strong> do site. Serviços de pesquisa histórica, produção de conteúdo, digitalização de acervo, gravação de áudio, fotografia e produção audiovisual poderão ser contratados separadamente.</p>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -658,36 +672,12 @@
       <h2 class="section-title">Nossos diferenciais</h2>
       <p class="section-subtitle">Mais do que um site, entregamos uma experiência digital que conecta história, emoção e tecnologia.</p>
       <div class="diff-grid">
-        <div class="diff-card">
-          <span class="emoji">📱</span>
-          <h4>100% Responsivo</h4>
-          <p>Design adaptado para todos os dispositivos: desktop, tablet e celular.</p>
-        </div>
-        <div class="diff-card">
-          <span class="emoji">🚀</span>
-          <h4>SEO desde o início</h4>
-          <p>Estrutura otimizada para os buscadores desde a primeira linha de código.</p>
-        </div>
-        <div class="diff-card">
-          <span class="emoji">♿</span>
-          <h4>Acessibilidade</h4>
-          <p>Desenvolvido seguindo as diretrizes WCAG para garantir acesso a todos.</p>
-        </div>
-        <div class="diff-card">
-          <span class="emoji">🎨</span>
-          <h4>Design com propósito</h4>
-          <p>Paleta institucional que transmite sobriedade, paz e solidez histórica.</p>
-        </div>
-        <div class="diff-card">
-          <span class="emoji">🔐</span>
-          <h4>Segurança & LGPD</h4>
-          <p>Conformidade completa com a legislação brasileira de proteção de dados.</p>
-        </div>
-        <div class="diff-card">
-          <span class="emoji">💬</span>
-          <h4>Suporte dedicado</h4>
-          <p>Acompanhamento próximo em todas as etapas do projeto, do briefing à entrega.</p>
-        </div>
+        <div class="diff-card"><span class="emoji">📱</span><h4>100% Responsivo</h4><p>Design adaptado para todos os dispositivos: desktop, tablet e celular.</p></div>
+        <div class="diff-card"><span class="emoji">🚀</span><h4>SEO desde o início</h4><p>Estrutura otimizada para os buscadores desde a primeira linha de código.</p></div>
+        <div class="diff-card"><span class="emoji">♿</span><h4>Acessibilidade</h4><p>Desenvolvido seguindo as diretrizes WCAG para garantir acesso a todos.</p></div>
+        <div class="diff-card"><span class="emoji">🎨</span><h4>Design com propósito</h4><p>Paleta institucional que transmite sobriedade, paz e solidez histórica.</p></div>
+        <div class="diff-card"><span class="emoji">🔐</span><h4>Segurança & LGPD</h4><p>Conformidade completa com a legislação brasileira de proteção de dados.</p></div>
+        <div class="diff-card"><span class="emoji">💬</span><h4>Suporte dedicado</h4><p>Acompanhamento próximo em todas as etapas, do briefing à entrega.</p></div>
       </div>
     </div>
   </section>
@@ -698,33 +688,11 @@
       <div class="section-label">Cronograma</div>
       <h2 class="section-title">Etapas e prazos de entrega</h2>
       <p class="section-subtitle">Um cronograma claro e objetivo para que o projeto seja executado com qualidade e dentro do tempo esperado.</p>
-      <div class="timeline">
-        <div class="timeline-steps">
-          <div class="tl-step">
-            <div class="tl-dot">📋</div>
-            <span class="tl-dias">Início</span>
-            <h4>Briefing & Planejamento</h4>
-            <p>Alinhamento de expectativas, definição do escopo e levantamento de todos os conteúdos necessários.</p>
-          </div>
-          <div class="tl-step">
-            <div class="tl-dot">🎨</div>
-            <span class="tl-dias">Até 30 dias</span>
-            <h4>Layout Inicial</h4>
-            <p>Entrega do design completo para aprovação do cliente, com identidade visual e estrutura de páginas.</p>
-          </div>
-          <div class="tl-step">
-            <div class="tl-dot">⚙️</div>
-            <span class="tl-dias">Após aprovação</span>
-            <h4>Desenvolvimento</h4>
-            <p>Codificação, integração das funcionalidades, acervo digital, agendamento e tour virtual.</p>
-          </div>
-          <div class="tl-step">
-            <div class="tl-dot">✅</div>
-            <span class="tl-dias">Até 90 dias</span>
-            <h4>Entrega Final</h4>
-            <p>Testes, ajustes finais, publicação e treinamento da equipe do CCHPA para gestão do conteúdo.</p>
-          </div>
-        </div>
+      <div class="timeline-steps">
+        <div class="tl-step"><div class="tl-dot">📋</div><span class="tl-dias">Início</span><h4>Briefing & Planejamento</h4><p>Alinhamento de expectativas e levantamento de conteúdos.</p></div>
+        <div class="tl-step"><div class="tl-dot">🎨</div><span class="tl-dias">Até 30 dias</span><h4>Layout Inicial</h4><p>Design completo para aprovação, com identidade visual e estrutura.</p></div>
+        <div class="tl-step"><div class="tl-dot">⚙️</div><span class="tl-dias">Após aprovação</span><h4>Desenvolvimento</h4><p>Codificação, integrações, acervo digital, agendamento e tour virtual.</p></div>
+        <div class="tl-step"><div class="tl-dot">✅</div><span class="tl-dias">Até 90 dias</span><h4>Entrega Final</h4><p>Testes, ajustes, publicação e treinamento da equipe do CCHPA.</p></div>
       </div>
     </div>
   </section>
@@ -738,49 +706,20 @@
       <div class="invest-card">
         <div class="invest-header">
           <p>Investimento Total do Projeto</p>
-          <div class="invest-price">
-            <span>R$</span> 8.990<span style="font-size:1.8rem">,00</span>
-          </div>
+          <div class="invest-price"><span>R$</span> 8.990<span style="font-size:1.8rem">,00</span></div>
           <div class="invest-parcelas">
-            <div class="invest-parcela-item">
-              <span class="p-label">Entrada (assinatura)</span>
-              <span class="p-value">R$ 4.495,00</span>
-            </div>
-            <div class="invest-parcela-item">
-              <span class="p-label">Saldo (entrega final)</span>
-              <span class="p-value">R$ 4.495,00</span>
-            </div>
+            <div class="invest-parcela-item"><span class="p-label">Entrada (assinatura)</span><span class="p-value">R$ 4.495,00</span></div>
+            <div class="invest-parcela-item"><span class="p-label">Saldo (entrega final)</span><span class="p-value">R$ 4.495,00</span></div>
           </div>
         </div>
         <div class="invest-body">
-          <div class="invest-row">
-            <span class="label">💳 Forma de Pagamento</span>
-            <span class="value">50% + 50%</span>
-          </div>
-          <div class="invest-row">
-            <span class="label">📥 Entrada (na assinatura)</span>
-            <span class="value">R$ 4.495,00</span>
-          </div>
-          <div class="invest-row">
-            <span class="label">📦 Saldo (na entrega final)</span>
-            <span class="value">R$ 4.495,00</span>
-          </div>
-          <div class="invest-row">
-            <span class="label">🗓️ Layout inicial em</span>
-            <span class="value">30 dias</span>
-          </div>
-          <div class="invest-row">
-            <span class="label">🚀 Entrega final em</span>
-            <span class="value">90 dias após aprovação</span>
-          </div>
-          <div class="invest-row">
-            <span class="label">📄 Contrato</span>
-            <span class="value">Sim, incluído</span>
-          </div>
-          <div class="invest-row">
-            <span class="label">🔒 Conformidade LGPD</span>
-            <span class="value">Inclusa</span>
-          </div>
+          <div class="invest-row"><span class="label">💳 Forma de Pagamento</span><span class="value">50% + 50%</span></div>
+          <div class="invest-row"><span class="label">📥 Entrada (na assinatura)</span><span class="value">R$ 4.495,00</span></div>
+          <div class="invest-row"><span class="label">📦 Saldo (na entrega final)</span><span class="value">R$ 4.495,00</span></div>
+          <div class="invest-row"><span class="label">🗓️ Layout inicial em</span><span class="value">30 dias</span></div>
+          <div class="invest-row"><span class="label">🚀 Entrega final em</span><span class="value">90 dias após aprovação</span></div>
+          <div class="invest-row"><span class="label">📄 Contrato</span><span class="value">Sim, incluído</span></div>
+          <div class="invest-row"><span class="label">🔒 Conformidade LGPD</span><span class="value">Inclusa</span></div>
         </div>
         <div class="invest-cta">
           <a href="https://www.instagram.com/agenciafiqui/" target="_blank" class="btn-invest">Falar com a FIQUI para fechar ✉️</a>
@@ -789,7 +728,7 @@
     </div>
   </section>
 
-  <!-- SOBRE A AGÊNCIA -->
+  <!-- AGÊNCIA -->
   <section id="agencia">
     <div class="container">
       <div class="section-label">A Agência</div>
@@ -801,12 +740,9 @@
           <p>Acreditamos que um site bem construído vai além do visual — ele conta uma história, facilita jornadas e abre portas. É exatamente isso que vamos fazer pelo CCHPA.</p>
           <p>Cada funcionalidade deste projeto foi pensada para atender o público real do Centro Cultural: estudantes, pesquisadores, devotos, moradores de Catanduva e visitantes de todo o Brasil.</p>
           <div class="agencia-pills">
-            <span class="pill">Design de Sites</span>
-            <span class="pill">UX/UI</span>
-            <span class="pill">SEO</span>
-            <span class="pill">Branding</span>
-            <span class="pill">Marketing Digital</span>
-            <span class="pill">Desenvolvimento Web</span>
+            <span class="pill">Design de Sites</span><span class="pill">UX/UI</span>
+            <span class="pill">SEO</span><span class="pill">Branding</span>
+            <span class="pill">Marketing Digital</span><span class="pill">Desenvolvimento Web</span>
           </div>
         </div>
         <div class="agencia-logo-box">
@@ -820,14 +756,646 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">
-      <img src="logo-fiqui.png" alt="Agência FIQUI" />
-    </div>
+    <div class="footer-logo"><img src="logo-fiqui.png" alt="Agência FIQUI" /></div>
     <div class="footer-line"></div>
     <p>Proposta comercial elaborada pela <strong style="color:rgba(255,255,255,0.7)">Agência FIQUI</strong> para a <strong style="color:rgba(255,255,255,0.7)">Fundação Padre Albino — CCHPA</strong></p>
     <p style="margin-top:8px;">📸 <a href="https://www.instagram.com/agenciafiqui/" target="_blank" style="color:var(--bege); text-decoration:none;">@agenciafiqui</a> &nbsp;|&nbsp; 📅 Junho de 2026</p>
     <p style="margin-top:24px; font-size:0.75rem; color:rgba(255,255,255,0.25);">Esta proposta é confidencial e destinada exclusivamente ao cliente indicado.</p>
   </footer>
+
+  <!-- ══════════════════════════════════════════
+       MODAIS
+  ══════════════════════════════════════════ -->
+
+  <!-- MODAL 01 · LINHA DO TEMPO -->
+  <div class="modal-overlay" id="modal-timeline" onclick="closeOnOverlay(event, 'modal-timeline')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">⏳</span>
+          <h2>Linha do Tempo Interativa</h2>
+          <p>A história de Padre Albino e da Fundação, do século XX até os dias atuais</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-timeline')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="mtl-item">
+          <div class="mtl-dot">1</div>
+          <div class="mtl-content">
+            <span class="canon-status concluido">1890</span>
+            <h4>Nascimento de Albino Negrini</h4>
+            <p>Nascido em 11 de março de 1890, em Coste di Santa Paola, no norte da Itália. Desde jovem demonstrou vocação religiosa e desejo de servir ao próximo.</p>
+          </div>
+        </div>
+        <div class="mtl-item">
+          <div class="mtl-dot">2</div>
+          <div class="mtl-content">
+            <span class="canon-status concluido">1913</span>
+            <h4>Chegada ao Brasil</h4>
+            <p>Partiu da Itália como missionário capuchinho e chegou ao Brasil em 1913, fixando-se na região de Catanduva para evangelizar e servir os mais pobres.</p>
+          </div>
+        </div>
+        <div class="mtl-item">
+          <div class="mtl-dot">3</div>
+          <div class="mtl-content">
+            <span class="canon-status concluido">1930</span>
+            <h4>Fundação do Hospital Emílio Carlos</h4>
+            <p>Movido pela fé e pela necessidade da população local, Padre Albino fundou o Hospital Emílio Carlos, referência em saúde para toda a região noroeste paulista.</p>
+          </div>
+        </div>
+        <div class="mtl-item">
+          <div class="mtl-dot">4</div>
+          <div class="mtl-content">
+            <span class="canon-status concluido">1965</span>
+            <h4>Falecimento e Legado</h4>
+            <p>Padre Albino faleceu em 1965, deixando um legado de fé, caridade e educação que continua vivo por meio das obras da Fundação que leva seu nome.</p>
+          </div>
+        </div>
+        <div class="mtl-item">
+          <div class="mtl-dot">5</div>
+          <div class="mtl-content">
+            <span class="canon-status atual">Hoje</span>
+            <h4>Fundação Padre Albino</h4>
+            <p>A FPA hoje mantém hospital, faculdade (UNIFIPA), colégio e o Centro Cultural e Histórico Padre Albino — preservando e ampliando o sonho do fundador.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 02 · ACERVO DIGITAL -->
+  <div class="modal-overlay" id="modal-acervo" onclick="closeOnOverlay(event, 'modal-acervo')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">🖼️</span>
+          <h2>Acervo Digital</h2>
+          <p>Prévia da galeria categorizada do CCHPA — fotos, objetos e documentos históricos</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-acervo')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--texto-suave); font-size:0.88rem; margin-bottom:20px;">Navegue pelas categorias do acervo. No site final, cada item será clicável e exibirá ficha técnica completa.</p>
+        <div class="acervo-grid">
+          <div class="acervo-thumb">📷<span class="acervo-label">Fotografias Históricas</span></div>
+          <div class="acervo-thumb">✉️<span class="acervo-label">Cartas & Documentos</span></div>
+          <div class="acervo-thumb">👗<span class="acervo-label">Vestimentas</span></div>
+          <div class="acervo-thumb">📖<span class="acervo-label">Livros & Manuscritos</span></div>
+          <div class="acervo-thumb">⛪<span class="acervo-label">Objetos Religiosos</span></div>
+          <div class="acervo-thumb">🏥<span class="acervo-label">História do Hospital</span></div>
+          <div class="acervo-thumb">🎓<span class="acervo-label">Educação & UNIFIPA</span></div>
+          <div class="acervo-thumb">🗺️<span class="acervo-label">Mapas & Registros</span></div>
+          <div class="acervo-thumb">🎞️<span class="acervo-label">Audiovisual</span></div>
+        </div>
+        <div style="background:var(--cinza); border-radius:12px; padding:16px 20px; display:flex; align-items:center; gap:12px;">
+          <span style="font-size:1.5rem;">⬇️</span>
+          <div>
+            <strong style="color:var(--roxo-escuro); font-size:0.9rem;">Materiais Educativos para Download</strong>
+            <p style="color:var(--texto-suave); font-size:0.82rem; margin-top:2px;">PDFs, cartilhas e materiais de apoio para escolas e pesquisadores — gratuitos e de livre acesso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 03 · AGENDAMENTO -->
+  <div class="modal-overlay" id="modal-agenda" onclick="closeOnOverlay(event, 'modal-agenda')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">📅</span>
+          <h2>Agendamento Online</h2>
+          <p>Sistema para escolas e grupos agendarem visitas guiadas ao CCHPA</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-agenda')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="agenda-cal">
+          <div class="cal-header">
+            <button class="cal-nav" onclick="prevMonth()">‹</button>
+            <h3 id="cal-title">Junho 2026</h3>
+            <button class="cal-nav" onclick="nextMonth()">›</button>
+          </div>
+          <div class="cal-grid" id="cal-grid"></div>
+        </div>
+        <div id="agenda-selected" style="display:none; background:var(--bege-claro); border:2px solid var(--bege); border-radius:12px; padding:14px 18px; margin-bottom:20px; color:var(--roxo-escuro); font-weight:600; font-size:0.9rem;"></div>
+        <div class="agenda-form">
+          <input type="text" placeholder="Nome da escola ou grupo" />
+          <input type="text" placeholder="Responsável" />
+          <input type="email" placeholder="E-mail para confirmação" />
+          <input type="tel" placeholder="WhatsApp / Telefone" />
+          <select>
+            <option value="">Número de visitantes</option>
+            <option>Até 15 pessoas</option>
+            <option>16 a 30 pessoas</option>
+            <option>31 a 50 pessoas</option>
+            <option>Mais de 50 pessoas</option>
+          </select>
+          <select>
+            <option value="">Período de preferência</option>
+            <option>Manhã (8h às 12h)</option>
+            <option>Tarde (13h às 17h)</option>
+          </select>
+          <button class="btn-modal" onclick="submitAgenda()">✅ Solicitar Agendamento</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 04 · CANONIZAÇÃO -->
+  <div class="modal-overlay" id="modal-canon" onclick="closeOnOverlay(event, 'modal-canon')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">✝️</span>
+          <h2>Causa da Canonização</h2>
+          <p>Acompanhe o processo de beatificação de Padre Albino no Vaticano</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-canon')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="canon-steps">
+          <div class="canon-step">
+            <div class="canon-dot done">✅</div>
+            <div class="canon-content">
+              <span class="canon-status concluido">Concluído</span>
+              <h4>Abertura do Processo Diocesano</h4>
+              <p>A Diocese de São José do Rio Preto abriu oficialmente o processo de beatificação, reunindo testemunhos e documentos sobre a vida e virtudes de Padre Albino.</p>
+            </div>
+          </div>
+          <div class="canon-step">
+            <div class="canon-dot done">✅</div>
+            <div class="canon-content">
+              <span class="canon-status concluido">Concluído</span>
+              <h4>Envio à Congregação para as Causas dos Santos</h4>
+              <p>O processo foi enviado ao Vaticano com toda a documentação exigida, incluindo a Positio — o dossiê com as evidências de vida santa.</p>
+            </div>
+          </div>
+          <div class="canon-step">
+            <div class="canon-dot current">🙏</div>
+            <div class="canon-content">
+              <span class="canon-status atual">Em andamento</span>
+              <h4>Análise pela Congregação</h4>
+              <p>Os teólogos e cardeais da Congregação para as Causas dos Santos analisam a Positio para reconhecimento das virtudes heroicas — passo para o título de Venerável.</p>
+            </div>
+          </div>
+          <div class="canon-step">
+            <div class="canon-dot pending">⏳</div>
+            <div class="canon-content">
+              <span class="canon-status pendente">Aguardando</span>
+              <h4>Reconhecimento de Milagre</h4>
+              <p>Para a beatificação, é necessário o reconhecimento de um milagre atribuído à intercessão de Padre Albino, verificado por comissão médica e teológica.</p>
+            </div>
+          </div>
+          <div class="canon-step">
+            <div class="canon-dot pending">👑</div>
+            <div class="canon-content">
+              <span class="canon-status pendente">Aguardando</span>
+              <h4>Beatificação e Canonização</h4>
+              <p>A cerimônia de beatificação pelo Papa e, posteriormente, a canonização — tornando Padre Albino Santo da Igreja Católica Apostólica Romana.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:28px; background:var(--bege-claro); border:2px solid var(--bege); border-radius:14px; padding:20px 24px;">
+          <h4 style="color:var(--roxo-escuro); font-weight:700; margin-bottom:8px;">🕊️ Compartilhe sua graça alcançada</h4>
+          <p style="color:var(--texto-suave); font-size:0.87rem; margin-bottom:14px;">O site contará com um formulário para que devotos registrem testemunhos de graças alcançadas pela intercessão de Padre Albino.</p>
+          <button class="btn-modal" style="background:var(--bege); color:var(--roxo-escuro);">Enviar meu relato</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 05 · TOUR / MAPA -->
+  <div class="modal-overlay" id="modal-mapa" onclick="closeOnOverlay(event, 'modal-mapa')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">🌍</span>
+          <h2>Tour Virtual & Localização</h2>
+          <p>Visualize a localização exata do CCHPA em Catanduva — SP</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-mapa')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="mapa-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.123!2d-48.9795963!3d-21.1404033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bc1e672ca4a241%3A0x2fd700a5f59537c8!2sCentro%20Cultural%20e%20Hist%C3%B3rico%20Padre%20Albino!5e0!3m2!1spt-BR!2sbr!4v1718000000000!5m2!1spt-BR!2sbr"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+        <div class="mapa-info">
+          <span class="map-icon">📍</span>
+          <div>
+            <h4>Centro Cultural e Histórico Padre Albino</h4>
+            <p>Catanduva — São Paulo, Brasil<br/>
+            🕐 Seg a Sex: 8h às 17h &nbsp;|&nbsp; Sáb: 8h às 12h<br/>
+            📞 Agendamento pelo site ou por telefone</p>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--roxo-escuro),var(--roxo)); border-radius:14px; padding:20px 24px; margin-top:16px; text-align:center;">
+          <p style="color:rgba(255,255,255,0.7); font-size:0.82rem; margin-bottom:8px;">🔮 No site final esta seção também terá:</p>
+          <p style="color:var(--bege); font-weight:700; font-size:1rem;">Tour Virtual 360° integrado</p>
+          <p style="color:rgba(255,255,255,0.6); font-size:0.82rem; margin-top:4px;">Navegação imersiva pelos ambientes do CCHPA com fotos 360° fornecidas pela FPA</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 06 · AUDIOGUIA -->
+  <div class="modal-overlay" id="modal-audio" onclick="closeOnOverlay(event, 'modal-audio')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">📻</span>
+          <h2>Audioguia com QR Code</h2>
+          <p>Demonstração do player de áudio que acompanhará cada peça do acervo</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-audio')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="audio-player">
+          <p class="audio-sub">PEÇA Nº 001 — ACERVO CCHPA</p>
+          <p class="audio-title">Batina de Padre Albino — 1940</p>
+          <div class="audio-wave" id="audio-wave">
+            <div class="audio-bar paused" style="height:8px"></div>
+            <div class="audio-bar paused" style="height:8px"></div>
+            <div class="audio-bar paused" style="height:8px"></div>
+            <div class="audio-bar paused" style="height:8px"></div>
+            <div class="audio-bar paused" style="height:8px"></div>
+            <div class="audio-bar paused" style="height:8px"></div>
+            <div class="audio-bar paused" style="height:8px"></div>
+            <div class="audio-bar paused" style="height:8px"></div>
+            <div class="audio-bar paused" style="height:8px"></div>
+          </div>
+          <div class="audio-controls">
+            <button class="btn-play" id="btn-play" onclick="toggleAudio()">▶</button>
+          </div>
+          <p style="color:rgba(255,255,255,0.5); font-size:0.75rem; margin-top:12px;">Clique no botão para ouvir a narração de demonstração</p>
+        </div>
+        <div class="qr-preview">
+          <h4>📱 QR Code da Peça</h4>
+          <p style="margin-bottom:16px;">No museu, cada vitrine terá um QR Code como este. O visitante escaneia e ouve a história da peça no próprio celular.</p>
+          <svg class="qr-code-svg" width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="120" fill="white"/>
+            <rect x="10" y="10" width="40" height="40" fill="none" stroke="#3B1A6B" stroke-width="4"/>
+            <rect x="18" y="18" width="24" height="24" fill="#3B1A6B"/>
+            <rect x="70" y="10" width="40" height="40" fill="none" stroke="#3B1A6B" stroke-width="4"/>
+            <rect x="78" y="18" width="24" height="24" fill="#3B1A6B"/>
+            <rect x="10" y="70" width="40" height="40" fill="none" stroke="#3B1A6B" stroke-width="4"/>
+            <rect x="18" y="78" width="24" height="24" fill="#3B1A6B"/>
+            <rect x="58" y="58" width="8" height="8" fill="#3B1A6B"/>
+            <rect x="70" y="58" width="8" height="8" fill="#3B1A6B"/>
+            <rect x="82" y="58" width="8" height="8" fill="#3B1A6B"/>
+            <rect x="94" y="58" width="8" height="8" fill="#3B1A6B"/>
+            <rect x="58" y="70" width="8" height="8" fill="#3B1A6B"/>
+            <rect x="82" y="70" width="8" height="8" fill="#3B1A6B"/>
+            <rect x="58" y="82" width="8" height="8" fill="#3B1A6B"/>
+            <rect x="70" y="82" width="8" height="8" fill="#3B1A6B"/>
+            <rect x="94" y="82" width="8" height="8" fill="#3B1A6B"/>
+            <rect x="58" y="94" width="8" height="8" fill="#3B1A6B"/>
+            <rect x="82" y="94" width="8" height="8" fill="#3B1A6B"/>
+            <rect x="94" y="94" width="8" height="8" fill="#3B1A6B"/>
+          </svg>
+          <p style="font-size:0.78rem; color:var(--texto-suave);">Cada peça do acervo terá seu próprio QR Code gerado automaticamente pelo sistema</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 07 · BLOG -->
+  <div class="modal-overlay" id="modal-blog" onclick="closeOnOverlay(event, 'modal-blog')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">✍️</span>
+          <h2>Blog "Memória e Fé"</h2>
+          <p>Prévia do formato dos artigos que fortalecerão o SEO do CCHPA</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-blog')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="blog-article">
+          <span class="blog-tag">História</span>
+          <h2 class="blog-title">Como Padre Albino transformou Catanduva em um polo de saúde no interior paulista</h2>
+          <div class="blog-meta">
+            <span>📅 Junho de 2026</span>
+            <span>✍️ Redação CCHPA</span>
+            <span>⏱️ 5 min de leitura</span>
+          </div>
+          <div class="blog-img">🏥</div>
+          <div class="blog-body">
+            <p>Quando o jovem missionário capuchinho Albino Negrini desembarcou no Brasil no início do século XX, Catanduva era ainda uma cidade em formação. Não havia estrutura de saúde adequada, e os doentes precisavam percorrer longas distâncias para receber atendimento.</p>
+            <p>Movido pela fé e pela visão de que servir ao doente era servir a Deus, Padre Albino iniciou uma jornada que transformaria para sempre a história da cidade. Com doações e muito trabalho voluntário, ergueu o que seria a semente do hoje renomado Hospital Emílio Carlos...</p>
+            <p style="color:var(--roxo-claro); font-style:italic;">[ Artigo completo disponível no site do CCHPA ]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 08 · DEPOIMENTOS EM VÍDEO -->
+  <div class="modal-overlay" id="modal-video" onclick="closeOnOverlay(event, 'modal-video')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">🎥</span>
+          <h2>Depoimentos em Vídeo</h2>
+          <p>Área para vídeos de pessoas impactadas pelas obras de Padre Albino</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-video')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="background:linear-gradient(135deg,var(--roxo-escuro),var(--roxo)); border-radius:16px; padding:40px; text-align:center; margin-bottom:24px;">
+          <div style="font-size:4rem; margin-bottom:16px;">🎬</div>
+          <p style="color:var(--bege); font-weight:700; font-size:1.1rem; margin-bottom:8px;">Área de Depoimentos em Vídeo</p>
+          <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.6;">Os vídeos serão fornecidos pela Fundação Padre Albino e incorporados ao site. O player suportará YouTube, Vimeo e arquivos diretos.</p>
+        </div>
+        <div class="depo-list">
+          <div class="depo-item">
+            <h5>🎙️ Depoimento — Ex-aluno do Colégio Catanduva</h5>
+            <span>Como a educação inspirada por Padre Albino moldou minha trajetória</span>
+          </div>
+          <div class="depo-item">
+            <h5>🎙️ Depoimento — Paciente curado no Hospital Emílio Carlos</h5>
+            <span>A graça que recebi e minha devoção a Padre Albino</span>
+          </div>
+          <div class="depo-item">
+            <h5>🎙️ Depoimento — Historiador local</h5>
+            <span>A importância do CCHPA para a memória de Catanduva</span>
+          </div>
+          <div class="depo-item">
+            <h5>🎙️ Depoimento — Membro da comunidade capuchinha</h5>
+            <span>O espírito missionário que guia o legado do Padre Albino</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 09 · LOCALIZAÇÃO -->
+  <div class="modal-overlay" id="modal-localizacao" onclick="closeOnOverlay(event, 'modal-localizacao')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">📍</span>
+          <h2>Localização e Horários</h2>
+          <p>Tudo que o visitante precisa saber antes de chegar ao CCHPA</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-localizacao')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="loc-grid">
+          <div class="loc-card"><span class="loc-emoji">🚗</span><h4>Como Chegar</h4><p>Acesso pela Av. Dr. Emílio Carlos, no centro de Catanduva. Estacionamento disponível nas proximidades.</p></div>
+          <div class="loc-card"><span class="loc-emoji">🚌</span><h4>Transporte Público</h4><p>Diversas linhas de ônibus urbano passam próximo ao Centro Cultural. Consulte a rota no site.</p></div>
+          <div class="loc-card"><span class="loc-emoji">♿</span><h4>Acessibilidade</h4><p>Rampa de acesso, piso tátil e banheiros adaptados para pessoas com deficiência ou mobilidade reduzida.</p></div>
+          <div class="loc-card"><span class="loc-emoji">🅿️</span><h4>Estacionamento</h4><p>Estacionamentos públicos e privados disponíveis a menos de 200m do Centro Cultural.</p></div>
+        </div>
+        <table class="horarios-table">
+          <thead><tr><th>Dia</th><th>Horário</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Segunda a Sexta</td><td>08h às 17h</td><td class="status-aberto">Aberto</td></tr>
+            <tr><td>Sábado</td><td>08h às 12h</td><td class="status-aberto">Aberto</td></tr>
+            <tr><td>Domingo</td><td>—</td><td class="status-fechado">Fechado</td></tr>
+            <tr><td>Feriados</td><td>Consultar</td><td style="color:#e65100; font-weight:700;">Variável</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 10 · FPA -->
+  <div class="modal-overlay" id="modal-fpa" onclick="closeOnOverlay(event, 'modal-fpa')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">🏗️</span>
+          <h2>Fundação Padre Albino</h2>
+          <p>Todas as unidades que compõem o legado vivo de Padre Albino</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-fpa')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="fpa-units">
+          <div class="fpa-unit"><span class="u-emoji">🏥</span><h4>Hospital Emílio Carlos</h4><p>Fundado por Padre Albino, é referência em saúde para toda a região noroeste paulista, com atendimento pelo SUS e planos de saúde.</p></div>
+          <div class="fpa-unit"><span class="u-emoji">🎓</span><h4>UNIFIPA</h4><p>Centro Universitário Padre Albino, formando profissionais de saúde, humanas e tecnologia com excelência e vocação humanista.</p></div>
+          <div class="fpa-unit"><span class="u-emoji">📚</span><h4>Colégio Catanduva</h4><p>Educação de qualidade do Ensino Fundamental ao Médio, com formação integral alinhada aos valores cristãos e humanistas.</p></div>
+          <div class="fpa-unit"><span class="u-emoji">🏛️</span><h4>CCHPA</h4><p>Centro Cultural e Histórico Padre Albino — preservando e difundindo o legado espiritual, histórico e cultural do fundador.</p></div>
+          <div class="fpa-unit"><span class="u-emoji">⛪</span><h4>Obras Sociais</h4><p>Projetos de assistência social, pastoral da saúde e iniciativas comunitárias inspiradas no carisma capuchinho de Padre Albino.</p></div>
+          <div class="fpa-unit"><span class="u-emoji">📡</span><h4>Comunicação FPA</h4><p>Área de comunicação integrada que conecta todas as unidades e fortalece a identidade da Fundação junto à comunidade.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 11 · LGPD -->
+  <div class="modal-overlay" id="modal-lgpd" onclick="closeOnOverlay(event, 'modal-lgpd')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">🔒</span>
+          <h2>Conformidade LGPD</h2>
+          <p>Como o site do CCHPA protegerá os dados dos seus visitantes</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-lgpd')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="lgpd-badge">✅ Em conformidade com a Lei nº 13.709/2018</div>
+        <div class="lgpd-section">
+          <h4>🍪 Aviso de Cookies</h4>
+          <p>O site exibirá banner de consentimento de cookies com opções granulares — o visitante poderá aceitar apenas os cookies essenciais ou todos os tipos.</p>
+        </div>
+        <div class="lgpd-section">
+          <h4>📋 Política de Privacidade</h4>
+          <p>Página dedicada, redigida em linguagem acessível, explicando quais dados são coletados, como são usados, armazenados e por quanto tempo.</p>
+        </div>
+        <div class="lgpd-section">
+          <h4>📝 Termos de Uso</h4>
+          <p>Documento que define as regras de uso do site, direitos autorais sobre o acervo e responsabilidades do usuário ao acessar e compartilhar conteúdo.</p>
+        </div>
+        <div class="lgpd-section">
+          <h4>📬 Formulários protegidos</h4>
+          <p>Todos os formulários do site (agendamento, relatos de graças, contato) contarão com consentimento explícito e opção de exclusão de dados a qualquer momento.</p>
+        </div>
+        <div class="lgpd-section">
+          <h4>🛡️ Canal do Titular de Dados</h4>
+          <p>E-mail e formulário dedicado para que qualquer pessoa exerça seus direitos: acesso, correção, exclusão e portabilidade dos seus dados pessoais.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 12 · FUTURO -->
+  <div class="modal-overlay" id="modal-futuro" onclick="closeOnOverlay(event, 'modal-futuro')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-emoji">🤖</span>
+          <h2>Pronto para o Futuro</h2>
+          <p>Funcionalidades que poderão ser adicionadas após a entrega inicial</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-futuro')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--texto-suave); font-size:0.88rem; margin-bottom:24px; line-height:1.7;">O site será desenvolvido com arquitetura modular e escalável, permitindo que novas funcionalidades sejam integradas sem a necessidade de reescrever o projeto do zero.</p>
+        <div class="roadmap">
+          <div class="roadmap-item">
+            <span class="r-emoji">🤖</span>
+            <div><span class="r-tag em-breve">Em breve</span><h4>Chatbot de Atendimento</h4><p>Assistente virtual para responder dúvidas sobre visitas, horários e o acervo do CCHPA — disponível 24h por dia.</p></div>
+          </div>
+          <div class="roadmap-item">
+            <span class="r-emoji">🌐</span>
+            <div><span class="r-tag em-breve">Em breve</span><h4>Versão em Inglês e Italiano</h4><p>Internacionalização do site para atender devotos e pesquisadores do exterior, especialmente da Itália, terra natal de Padre Albino.</p></div>
+          </div>
+          <div class="roadmap-item">
+            <span class="r-emoji">📱</span>
+            <div><span class="r-tag futuro">Futuro</span><h4>Aplicativo Mobile</h4><p>App para iOS e Android com audioguia, mapa interno do museu, acervo e notificações sobre eventos e novidades do CCHPA.</p></div>
+          </div>
+          <div class="roadmap-item">
+            <span class="r-emoji">🔬</span>
+            <div><span class="r-tag futuro">Futuro</span><h4>Realidade Aumentada</h4><p>Tecnologia AR para que o visitante aponte o celular para peças do acervo e veja informações sobrepostas em tempo real.</p></div>
+          </div>
+          <div class="roadmap-item">
+            <span class="r-emoji">📊</span>
+            <div><span class="r-tag futuro">Futuro</span><h4>Painel de Gestão e Analytics</h4><p>Dashboard para a equipe do CCHPA acompanhar visitas virtuais, downloads e engajamento com o acervo digital.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════════ -->
+  <script>
+    // ── MODAL SYSTEM ──
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (id === 'modal-agenda') renderCalendar();
+      }
+    }
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      if (id === 'modal-audio') stopAudio();
+    }
+    function closeOnOverlay(e, id) {
+      if (e.target === e.currentTarget) closeModal(id);
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(m => {
+          m.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+        stopAudio();
+      }
+    });
+
+    // ── CALENDAR ──
+    let currentDate = new Date(2026, 5, 1);
+    let selectedDay = null;
+    const months = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+    const blocked = [0, 6]; // Dom e Sáb tarde — simplificado
+
+    function renderCalendar() {
+      const grid = document.getElementById('cal-grid');
+      const title = document.getElementById('cal-title');
+      if (!grid) return;
+      title.textContent = months[currentDate.getMonth()] + ' ' + currentDate.getFullYear();
+      grid.innerHTML = '';
+      const days = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+      days.forEach(d => { const el = document.createElement('div'); el.className = 'cal-day-label'; el.textContent = d; grid.appendChild(el); });
+      const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
+      const totalDays = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+      const today = new Date();
+      for (let i = 0; i < firstDay; i++) { const el = document.createElement('div'); el.className = 'cal-day empty'; grid.appendChild(el); }
+      for (let d = 1; d <= totalDays; d++) {
+        const el = document.createElement('div');
+        const isBlocked = new Date(currentDate.getFullYear(), currentDate.getMonth(), d).getDay() === 0;
+        el.className = 'cal-day' + (isBlocked ? ' blocked' : '');
+        if (today.getDate() === d && today.getMonth() === currentDate.getMonth() && today.getFullYear() === currentDate.getFullYear()) el.classList.add('today');
+        if (selectedDay === d && !isBlocked) el.classList.add('selected');
+        el.textContent = d;
+        if (!isBlocked) el.onclick = () => selectDay(d);
+        grid.appendChild(el);
+      }
+    }
+    function selectDay(d) {
+      selectedDay = d;
+      renderCalendar();
+      const info = document.getElementById('agenda-selected');
+      info.style.display = 'block';
+      info.innerHTML = `📅 Data selecionada: <strong>${d} de ${months[currentDate.getMonth()]} de ${currentDate.getFullYear()}</strong> — Confirme abaixo preenchendo o formulário`;
+    }
+    function prevMonth() { currentDate.setMonth(currentDate.getMonth() - 1); selectedDay = null; renderCalendar(); }
+    function nextMonth() { currentDate.setMonth(currentDate.getMonth() + 1); selectedDay = null; renderCalendar(); }
+    function submitAgenda() {
+      alert('✅ Solicitação enviada com sucesso!\n\nEm breve nossa equipe entrará em contato para confirmar sua visita ao CCHPA. Obrigado!');
+      closeModal('modal-agenda');
+    }
+
+    // ── AUDIO GUIDE ──
+    let synth = window.speechSynthesis;
+    let utterance = null;
+    let isPlaying = false;
+
+    function toggleAudio() {
+      if (isPlaying) {
+        stopAudio();
+      } else {
+        playAudio();
+      }
+    }
+
+    function playAudio() {
+      if (synth.speaking) synth.cancel();
+      const text = 'Bem-vindo ao Audioguia do Centro Cultural e Histórico Padre Albino. ' +
+        'Você está diante da batina utilizada pelo Padre Albino Negrini, peça número 001 do nosso acervo. ' +
+        'Esta vestimenta foi usada pelo missionário capuchinho durante suas celebrações em Catanduva, no interior de São Paulo, por volta de 1940. ' +
+        'Padre Albino chegou ao Brasil em 1913, e dedicou toda a sua vida ao serviço dos mais pobres, fundando o Hospital Emílio Carlos e outras obras de caridade. ' +
+        'Para conhecer mais peças do nosso acervo, escaneie os QR Codes disponíveis em cada vitrine. Que a paz e o bem estejam com você.';
+      utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'pt-BR';
+      utterance.rate = 0.92;
+      utterance.pitch = 1.0;
+      utterance.volume = 1;
+      const voices = synth.getVoices();
+      const ptBR = voices.find(v => v.lang === 'pt-BR') || voices.find(v => v.lang.startsWith('pt'));
+      if (ptBR) utterance.voice = ptBR;
+      utterance.onend = () => { isPlaying = false; updateAudioUI(false); };
+      utterance.onerror = () => { isPlaying = false; updateAudioUI(false); };
+      synth.speak(utterance);
+      isPlaying = true;
+      updateAudioUI(true);
+    }
+
+    function stopAudio() {
+      if (synth.speaking) synth.cancel();
+      isPlaying = false;
+      updateAudioUI(false);
+    }
+
+    function updateAudioUI(playing) {
+      const btn = document.getElementById('btn-play');
+      const bars = document.querySelectorAll('.audio-bar');
+      if (btn) btn.textContent = playing ? '⏸' : '▶';
+      bars.forEach(b => {
+        if (playing) b.classList.remove('paused');
+        else b.classList.add('paused');
+      });
+    }
+
+    // carrega vozes
+    if (speechSynthesis.onvoiceschanged !== undefined) {
+      speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
+    }
+  </script>
 
 </body>
 </html>
