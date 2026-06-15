@@ -19,14 +19,8 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--texto);
-      background: var(--branco);
-    }
+    body { font-family: 'Inter', sans-serif; color: var(--texto); background: var(--branco); }
 
     /* ── NAV ── */
     nav {
@@ -41,20 +35,14 @@
       box-shadow: 0 2px 16px rgba(0,0,0,0.25);
     }
 
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      color: var(--bege);
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 2px;
+    /* ALTERADO: logo agora é imagem */
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+      display: block;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a {
       color: rgba(255,255,255,0.8);
       text-decoration: none;
@@ -64,7 +52,6 @@
       text-transform: uppercase;
       transition: color 0.3s;
     }
-
     .nav-links a:hover { color: var(--bege); }
 
     /* ── HERO ── */
@@ -80,7 +67,6 @@
       position: relative;
       overflow: hidden;
     }
-
     #hero::before {
       content: '';
       position: absolute;
@@ -89,7 +75,6 @@
       border-radius: 50%;
       background: rgba(245,201,122,0.08);
     }
-
     #hero::after {
       content: '';
       position: absolute;
@@ -111,7 +96,6 @@
       border-radius: 50px;
       margin-bottom: 24px;
     }
-
     #hero h1 {
       font-family: 'Playfair Display', serif;
       color: var(--branco);
@@ -120,9 +104,7 @@
       max-width: 780px;
       margin-bottom: 20px;
     }
-
     #hero h1 span { color: var(--bege); }
-
     #hero p {
       color: rgba(255,255,255,0.75);
       font-size: 1.05rem;
@@ -138,18 +120,13 @@
       justify-content: center;
       margin-bottom: 48px;
     }
-
-    .hero-meta-item {
-      text-align: center;
-    }
-
+    .hero-meta-item { text-align: center; }
     .hero-meta-item strong {
       display: block;
       color: var(--bege);
       font-size: 1.4rem;
       font-weight: 700;
     }
-
     .hero-meta-item span {
       color: rgba(255,255,255,0.6);
       font-size: 0.78rem;
@@ -169,7 +146,6 @@
       transition: all 0.3s;
       display: inline-block;
     }
-
     .btn-primary:hover {
       background: #e6b45a;
       transform: translateY(-2px);
@@ -178,11 +154,7 @@
 
     /* ── SECTIONS GENÉRICAS ── */
     section { padding: 90px 24px; }
-
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-    }
+    .container { max-width: 1080px; margin: 0 auto; }
 
     .section-label {
       display: inline-block;
@@ -196,7 +168,6 @@
       border-radius: 50px;
       margin-bottom: 16px;
     }
-
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.8rem, 3.5vw, 2.6rem);
@@ -204,7 +175,6 @@
       margin-bottom: 16px;
       line-height: 1.25;
     }
-
     .section-subtitle {
       color: var(--texto-suave);
       font-size: 1rem;
@@ -214,7 +184,6 @@
 
     /* ── SOBRE O PROJETO ── */
     #sobre { background: var(--bege-claro); }
-
     .sobre-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -222,7 +191,6 @@
       align-items: center;
       margin-top: 48px;
     }
-
     .sobre-card {
       background: var(--branco);
       border-radius: 16px;
@@ -230,36 +198,23 @@
       box-shadow: 0 4px 24px rgba(91,45,142,0.08);
       border-left: 5px solid var(--roxo);
     }
-
     .sobre-card h3 {
       font-family: 'Playfair Display', serif;
       color: var(--roxo-escuro);
       font-size: 1.2rem;
       margin-bottom: 12px;
     }
-
-    .sobre-card p {
-      color: var(--texto-suave);
-      font-size: 0.93rem;
-      line-height: 1.7;
-    }
-
-    .sobre-card .icon {
-      font-size: 2rem;
-      margin-bottom: 14px;
-      display: block;
-    }
+    .sobre-card p { color: var(--texto-suave); font-size: 0.93rem; line-height: 1.7; }
+    .sobre-card .icon { font-size: 2rem; margin-bottom: 14px; display: block; }
 
     /* ── ESCOPO ── */
     #escopo { background: var(--branco); }
-
     .escopo-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 28px;
       margin-top: 48px;
     }
-
     .escopo-item {
       background: var(--cinza);
       border-radius: 14px;
@@ -267,13 +222,11 @@
       transition: all 0.3s;
       border: 2px solid transparent;
     }
-
     .escopo-item:hover {
       border-color: var(--roxo-claro);
       transform: translateY(-4px);
       box-shadow: 0 8px 28px rgba(91,45,142,0.1);
     }
-
     .escopo-num {
       width: 40px; height: 40px;
       background: var(--roxo);
@@ -286,36 +239,22 @@
       font-size: 0.9rem;
       margin-bottom: 16px;
     }
-
-    .escopo-item h4 {
-      font-weight: 700;
-      color: var(--roxo-escuro);
-      margin-bottom: 8px;
-      font-size: 1rem;
-    }
-
-    .escopo-item p {
-      color: var(--texto-suave);
-      font-size: 0.88rem;
-      line-height: 1.65;
-    }
+    .escopo-item h4 { font-weight: 700; color: var(--roxo-escuro); margin-bottom: 8px; font-size: 1rem; }
+    .escopo-item p { color: var(--texto-suave); font-size: 0.88rem; line-height: 1.65; }
 
     /* ── DIFERENCIAIS ── */
     #diferenciais {
       background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
       color: var(--branco);
     }
-
     #diferenciais .section-title { color: var(--branco); }
     #diferenciais .section-subtitle { color: rgba(255,255,255,0.7); }
-
     .diff-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 24px;
       margin-top: 48px;
     }
-
     .diff-card {
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.12);
@@ -324,47 +263,20 @@
       text-align: center;
       transition: all 0.3s;
     }
-
-    .diff-card:hover {
-      background: rgba(255,255,255,0.14);
-      transform: translateY(-4px);
-    }
-
-    .diff-card .emoji {
-      font-size: 2.4rem;
-      margin-bottom: 14px;
-      display: block;
-    }
-
-    .diff-card h4 {
-      color: var(--bege);
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .diff-card p {
-      color: rgba(255,255,255,0.65);
-      font-size: 0.85rem;
-      line-height: 1.6;
-    }
+    .diff-card:hover { background: rgba(255,255,255,0.14); transform: translateY(-4px); }
+    .diff-card .emoji { font-size: 2.4rem; margin-bottom: 14px; display: block; }
+    .diff-card h4 { color: var(--bege); font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+    .diff-card p { color: rgba(255,255,255,0.65); font-size: 0.85rem; line-height: 1.6; }
 
     /* ── PRAZO ── */
     #prazo { background: var(--bege-claro); }
-
-    .timeline {
-      position: relative;
-      margin-top: 52px;
-      padding-left: 0;
-    }
-
+    .timeline { position: relative; margin-top: 52px; padding-left: 0; }
     .timeline-steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 0;
       position: relative;
     }
-
     .timeline-steps::before {
       content: '';
       position: absolute;
@@ -374,14 +286,7 @@
       background: var(--roxo-claro);
       z-index: 0;
     }
-
-    .tl-step {
-      text-align: center;
-      position: relative;
-      z-index: 1;
-      padding: 0 16px;
-    }
-
+    .tl-step { text-align: center; position: relative; z-index: 1; padding: 0 16px; }
     .tl-dot {
       width: 72px; height: 72px;
       background: var(--roxo);
@@ -393,14 +298,7 @@
       font-size: 1.5rem;
       box-shadow: 0 4px 16px rgba(91,45,142,0.3);
     }
-
-    .tl-step h4 {
-      color: var(--roxo-escuro);
-      font-weight: 700;
-      margin-bottom: 8px;
-      font-size: 0.95rem;
-    }
-
+    .tl-step h4 { color: var(--roxo-escuro); font-weight: 700; margin-bottom: 8px; font-size: 0.95rem; }
     .tl-step .tl-dias {
       display: inline-block;
       background: var(--roxo);
@@ -411,16 +309,10 @@
       border-radius: 50px;
       margin-bottom: 10px;
     }
-
-    .tl-step p {
-      color: var(--texto-suave);
-      font-size: 0.83rem;
-      line-height: 1.6;
-    }
+    .tl-step p { color: var(--texto-suave); font-size: 0.83rem; line-height: 1.6; }
 
     /* ── INVESTIMENTO ── */
     #investimento { background: var(--branco); }
-
     .invest-card {
       max-width: 680px;
       margin: 48px auto 0;
@@ -429,13 +321,7 @@
       overflow: hidden;
       box-shadow: 0 12px 48px rgba(91,45,142,0.25);
     }
-
-    .invest-header {
-      background: var(--roxo);
-      padding: 32px 40px;
-      text-align: center;
-    }
-
+    .invest-header { background: var(--roxo); padding: 32px 40px; text-align: center; }
     .invest-header p {
       color: rgba(255,255,255,0.7);
       font-size: 0.85rem;
@@ -444,6 +330,7 @@
       text-transform: uppercase;
     }
 
+    /* ALTERADO: valor real exibido */
     .invest-price {
       font-family: 'Playfair Display', serif;
       color: var(--bege);
@@ -451,16 +338,37 @@
       font-weight: 700;
       line-height: 1;
     }
+    .invest-price span { font-size: 1.4rem; vertical-align: super; }
 
-    .invest-price span {
-      font-size: 1.4rem;
-      vertical-align: super;
+    /* NOVO: parcelas destacadas */
+    .invest-parcelas {
+      margin-top: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .invest-parcela-item {
+      background: rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    .invest-parcela-item .p-label {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .invest-parcela-item .p-value {
+      color: var(--bege);
+      font-weight: 700;
+      font-size: 1.1rem;
     }
 
-    .invest-body {
-      padding: 36px 40px;
-    }
-
+    .invest-body { padding: 36px 40px; }
     .invest-row {
       display: flex;
       justify-content: space-between;
@@ -468,25 +376,11 @@
       padding: 14px 0;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-
     .invest-row:last-child { border-bottom: none; }
+    .invest-row .label { color: rgba(255,255,255,0.6); font-size: 0.88rem; }
+    .invest-row .value { color: var(--bege); font-weight: 700; font-size: 1rem; }
 
-    .invest-row .label {
-      color: rgba(255,255,255,0.6);
-      font-size: 0.88rem;
-    }
-
-    .invest-row .value {
-      color: var(--bege);
-      font-weight: 700;
-      font-size: 1rem;
-    }
-
-    .invest-cta {
-      padding: 0 40px 36px;
-      text-align: center;
-    }
-
+    .invest-cta { padding: 0 40px 36px; text-align: center; }
     .btn-invest {
       display: inline-block;
       background: var(--bege);
@@ -499,15 +393,10 @@
       transition: all 0.3s;
       width: 100%;
     }
+    .btn-invest:hover { background: #e6b45a; transform: translateY(-2px); }
 
-    .btn-invest:hover {
-      background: #e6b45a;
-      transform: translateY(-2px);
-    }
-
-    /* ── SOBRE A FIQUI ── */
+    /* ── SOBRE A AGÊNCIA ── */
     #agencia { background: var(--cinza); }
-
     .agencia-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -515,21 +404,8 @@
       align-items: center;
       margin-top: 48px;
     }
-
-    .agencia-text p {
-      color: var(--texto-suave);
-      font-size: 0.95rem;
-      line-height: 1.8;
-      margin-bottom: 16px;
-    }
-
-    .agencia-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 24px;
-    }
-
+    .agencia-text p { color: var(--texto-suave); font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
+    .agencia-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
     .pill {
       background: var(--roxo);
       color: var(--branco);
@@ -539,28 +415,24 @@
       border-radius: 50px;
     }
 
+    /* ALTERADO: logo box agora usa imagem */
     .agencia-logo-box {
       background: var(--roxo-escuro);
       border-radius: 20px;
       padding: 60px 40px;
       text-align: center;
     }
-
-    .agencia-logo-box .logo-text {
-      font-family: 'Playfair Display', serif;
-      color: var(--bege);
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 4px;
+    .agencia-logo-box img {
+      width: 160px;
+      height: auto;
+      margin-bottom: 16px;
     }
-
     .agencia-logo-box .tagline {
       color: rgba(255,255,255,0.55);
       font-size: 0.85rem;
-      margin-top: 10px;
+      margin-top: 4px;
       font-style: italic;
     }
-
     .agencia-logo-box .insta {
       display: inline-block;
       margin-top: 20px;
@@ -574,34 +446,17 @@
     }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--roxo-escuro);
-      padding: 48px 24px;
-      text-align: center;
-    }
+    footer { background: var(--roxo-escuro); padding: 48px 24px; text-align: center; }
 
-    footer .footer-logo {
-      font-family: 'Playfair Display', serif;
-      color: var(--bege);
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: 3px;
+    /* ALTERADO: footer logo agora é imagem */
+    .footer-logo img {
+      height: 56px;
+      width: auto;
       margin-bottom: 12px;
     }
 
-    footer p {
-      color: rgba(255,255,255,0.45);
-      font-size: 0.82rem;
-      line-height: 1.7;
-    }
-
-    footer .footer-line {
-      width: 48px;
-      height: 3px;
-      background: var(--bege);
-      margin: 16px auto;
-      border-radius: 2px;
-    }
+    footer p { color: rgba(255,255,255,0.45); font-size: 0.82rem; line-height: 1.7; }
+    footer .footer-line { width: 48px; height: 3px; background: var(--bege); margin: 16px auto; border-radius: 2px; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
@@ -617,7 +472,10 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">FIQUI</div>
+    <!-- ✅ LOGO ATUALIZADA: imagem da marca FIQUI -->
+    <div class="nav-logo">
+      <img src="logo-fiqui.png" alt="Agência FIQUI" />
+    </div>
     <ul class="nav-links">
       <li><a href="#sobre">Projeto</a></li>
       <li><a href="#escopo">Escopo</a></li>
@@ -632,7 +490,6 @@
     <div class="hero-badge">Proposta Comercial · 2026</div>
     <h1>Renovação Digital do <span>Centro Cultural e Histórico Padre Albino</span></h1>
     <p>Uma proposta pensada para modernizar, preservar e conectar o legado de Padre Albino com o mundo digital — com tecnologia, identidade e propósito.</p>
-
     <div class="hero-meta">
       <div class="hero-meta-item">
         <strong>CCHPA</strong>
@@ -651,7 +508,6 @@
         <span>Ano de entrega</span>
       </div>
     </div>
-
     <a href="#sobre" class="btn-primary">Conhecer a Proposta ↓</a>
   </section>
 
@@ -661,7 +517,6 @@
       <div class="section-label">O Projeto</div>
       <h2 class="section-title">Por que renovar o site do CCHPA?</h2>
       <p class="section-subtitle">O Centro Cultural e Histórico Padre Albino é um patrimônio vivo de Catanduva. A renovação digital vai ampliar seu alcance, facilitar o acesso ao acervo e fortalecer a missão de preservar a memória da "Cidade Feitiço".</p>
-
       <div class="sobre-grid">
         <div class="sobre-card">
           <span class="icon">🏛️</span>
@@ -693,81 +548,67 @@
       <div class="section-label">Escopo Completo</div>
       <h2 class="section-title">O que está incluso no projeto</h2>
       <p class="section-subtitle">Todas as funcionalidades e páginas solicitadas no briefing, desenvolvidas com foco em experiência do usuário, acessibilidade e performance.</p>
-
       <div class="escopo-grid">
-
         <div class="escopo-item">
           <div class="escopo-num">01</div>
           <h4>⏳ Linha do Tempo Interativa</h4>
           <p>Narrativa visual da vida de Padre Albino, desde a chegada ao Brasil até a criação das unidades da Fundação, com linha do tempo das unidades da FPA.</p>
         </div>
-
         <div class="escopo-item">
           <div class="escopo-num">02</div>
           <h4>🖼️ Acervo Digital</h4>
           <p>Galeria categorizada com fotos, objetos pessoais, vestimentas e documentos digitalizados, com área para download de materiais educativos.</p>
         </div>
-
         <div class="escopo-item">
           <div class="escopo-num">03</div>
           <h4>📅 Agendamento Online</h4>
           <p>Formulário simplificado para visitas guiadas de escolas e grupos, com integração de e-mail e confirmação automática.</p>
         </div>
-
         <div class="escopo-item">
           <div class="escopo-num">04</div>
           <h4>✝️ Causa da Canonização</h4>
           <p>Espaço dedicado para atualizações sobre o processo no Vaticano e coleta de relatos de graças alcançadas.</p>
         </div>
-
         <div class="escopo-item">
           <div class="escopo-num">05</div>
           <h4>🌍 Tour Virtual 360°</h4>
           <p>Permite que pessoas de qualquer lugar do mundo "entrem" virtualmente no Centro Cultural, essencial para a disseminação do legado.</p>
         </div>
-
         <div class="escopo-item">
           <div class="escopo-num">06</div>
           <h4>📻 Audioguia com QR Code</h4>
           <p>QR Codes que podem ser lidos no local para ouvir a história de cada peça do acervo, aumentando a acessibilidade da visita.</p>
         </div>
-
         <div class="escopo-item">
           <div class="escopo-num">07</div>
           <h4>✍️ Blog "Memória e Fé"</h4>
           <p>Artigos mensais sobre curiosidades históricas para fortalecer o SEO orgânico com palavras-chave como "Museu Catanduva" e "História Padre Albino".</p>
         </div>
-
         <div class="escopo-item">
           <div class="escopo-num">08</div>
           <h4>🎥 Depoimentos em Vídeo</h4>
           <p>Área dedicada a vídeos de pessoas que conviveram com Padre Albino ou foram impactadas por suas obras.</p>
         </div>
-
         <div class="escopo-item">
           <div class="escopo-num">09</div>
           <h4>📍 Localização e Horários</h4>
           <p>Informações claras sobre como chegar, horário de funcionamento, acessibilidade e regras de conduta para visitas.</p>
         </div>
-
         <div class="escopo-item">
           <div class="escopo-num">10</div>
           <h4>🏗️ Área da FPA</h4>
           <p>Seção dedicada à Fundação Padre Albino com fotos, dados históricos e conexão com todas as unidades: UNIFIPA, Hospital Emílio Carlos, Colégio Catanduva e demais.</p>
         </div>
-
         <div class="escopo-item">
           <div class="escopo-num">11</div>
           <h4>🔒 Conformidade LGPD</h4>
           <p>Implementação de termos de uso e política de privacidade conforme a Lei Geral de Proteção de Dados, especialmente nos formulários de contato e doação.</p>
         </div>
-
         <div class="escopo-item">
           <div class="escopo-num">12</div>
           <h4>🤖 Pronto para o Futuro</h4>
           <p>Arquitetura preparada para integrações futuras como chatbots de atendimento e novos sistemas de gestão.</p>
         </div>
-
       </div>
     </div>
   </section>
@@ -778,7 +619,6 @@
       <div class="section-label" style="background: rgba(255,255,255,0.15);">Por que a FIQUI?</div>
       <h2 class="section-title">Nossos diferenciais</h2>
       <p class="section-subtitle">Mais do que um site, entregamos uma experiência digital que conecta história, emoção e tecnologia.</p>
-
       <div class="diff-grid">
         <div class="diff-card">
           <span class="emoji">📱</span>
@@ -820,38 +660,32 @@
       <div class="section-label">Cronograma</div>
       <h2 class="section-title">Etapas e prazos de entrega</h2>
       <p class="section-subtitle">Um cronograma claro e objetivo para que o projeto seja executado com qualidade e dentro do tempo esperado.</p>
-
       <div class="timeline">
         <div class="timeline-steps">
-
           <div class="tl-step">
             <div class="tl-dot">📋</div>
             <span class="tl-dias">Início</span>
             <h4>Briefing & Planejamento</h4>
             <p>Alinhamento de expectativas, definição do escopo e levantamento de todos os conteúdos necessários.</p>
           </div>
-
           <div class="tl-step">
             <div class="tl-dot">🎨</div>
             <span class="tl-dias">Até 30 dias</span>
             <h4>Layout Inicial</h4>
             <p>Entrega do design completo para aprovação do cliente, com identidade visual e estrutura de páginas.</p>
           </div>
-
           <div class="tl-step">
             <div class="tl-dot">⚙️</div>
             <span class="tl-dias">Após aprovação</span>
             <h4>Desenvolvimento</h4>
             <p>Codificação, integração das funcionalidades, acervo digital, agendamento e tour virtual.</p>
           </div>
-
           <div class="tl-step">
             <div class="tl-dot">✅</div>
             <span class="tl-dias">Até 90 dias</span>
             <h4>Entrega Final</h4>
             <p>Testes, ajustes finais, publicação e treinamento da equipe do CCHPA para gestão do conteúdo.</p>
           </div>
-
         </div>
       </div>
     </div>
@@ -867,8 +701,21 @@
       <div class="invest-card">
         <div class="invest-header">
           <p>Investimento Total do Projeto</p>
-          <div class="invest-price">A consultar</div>
-          <p style="margin-top:10px; font-size:0.8rem;">Valor a ser definido após alinhamento detalhado do escopo</p>
+          <!-- ✅ VALOR ATUALIZADO -->
+          <div class="invest-price">
+            <span>R$</span> 8.990<span style="font-size:1.8rem">,00</span>
+          </div>
+          <!-- ✅ PARCELAS DETALHADAS -->
+          <div class="invest-parcelas">
+            <div class="invest-parcela-item">
+              <span class="p-label">Entrada (assinatura)</span>
+              <span class="p-value">R$ 4.495,00</span>
+            </div>
+            <div class="invest-parcela-item">
+              <span class="p-label">Saldo (entrega final)</span>
+              <span class="p-value">R$ 4.495,00</span>
+            </div>
+          </div>
         </div>
         <div class="invest-body">
           <div class="invest-row">
@@ -877,11 +724,11 @@
           </div>
           <div class="invest-row">
             <span class="label">📥 Entrada (na assinatura)</span>
-            <span class="value">50% do valor total</span>
+            <span class="value">R$ 4.495,00</span>
           </div>
           <div class="invest-row">
             <span class="label">📦 Saldo (na entrega final)</span>
-            <span class="value">50% do valor total</span>
+            <span class="value">R$ 4.495,00</span>
           </div>
           <div class="invest-row">
             <span class="label">🗓️ Layout inicial em</span>
@@ -913,7 +760,6 @@
       <div class="section-label">A Agência</div>
       <h2 class="section-title">Quem vai fazer acontecer</h2>
       <p class="section-subtitle">A FIQUI é uma agência digital especializada em conectar marcas e instituições ao mundo digital com estratégia, criatividade e resultado.</p>
-
       <div class="agencia-inner">
         <div class="agencia-text">
           <p>Somos uma agência digital focada em criar experiências digitais que geram conexão real entre marcas e pessoas. Trabalhamos com planejamento, design e tecnologia para que cada projeto seja único e eficaz.</p>
@@ -928,8 +774,9 @@
             <span class="pill">Desenvolvimento Web</span>
           </div>
         </div>
+        <!-- ✅ LOGO FIQUI: imagem no lugar do texto -->
         <div class="agencia-logo-box">
-          <div class="logo-text">fiqui</div>
+          <img src="logo-fiqui.png" alt="Agência FIQUI" />
           <p class="tagline">conecte-se</p>
           <a class="insta" href="https://www.instagram.com/agenciafiqui/" target="_blank">@agenciafiqui</a>
         </div>
@@ -939,10 +786,13 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">fiqui</div>
+    <!-- ✅ LOGO FIQUI NO FOOTER: imagem -->
+    <div class="footer-logo">
+      <img src="logo-fiqui.png" alt="Agência FIQUI" />
+    </div>
     <div class="footer-line"></div>
     <p>Proposta comercial elaborada pela <strong style="color:rgba(255,255,255,0.7)">Agência FIQUI</strong> para a <strong style="color:rgba(255,255,255,0.7)">Fundação Padre Albino — CCHPA</strong></p>
-    <p style="margin-top:8px;">📸 <a href="https://www.instagram.com/agenciafiqui/" target="_blank" style="color:var(--bege); text-decoration:none;">@agenciafiqui</a> &nbsp;|&nbsp; 📅 Março de 2026</p>
+    <p style="margin-top:8px;">📸 <a href="https://www.instagram.com/agenciafiqui/" target="_blank" style="color:var(--bege); text-decoration:none;">@agenciafiqui</a> &nbsp;|&nbsp; 📅 Junho de 2026</p>
     <p style="margin-top:24px; font-size:0.75rem; color:rgba(255,255,255,0.25);">Esta proposta é confidencial e destinada exclusivamente ao cliente indicado.</p>
   </footer>
 
